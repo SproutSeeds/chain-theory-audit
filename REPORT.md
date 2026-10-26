@@ -31,8 +31,9 @@ Every Verified or Exact claim names the command that checks it.
 - **Additional results**, true independently of Chain Theory's physics:
   - Maximally entangled links straight across a mirror are Osterwalder–Schrader reflection
     positive, and so are the webs built from them by mirrored operations.
-  - The (3,3) link type is dark: the Choi map is positive and not decomposable. This is proved in
-    Lean and discharges the (3,3) instance of the Letter's `ReadCap` hypothesis.
+  - Every link type with both ends at least 3 is dark: the Choi map and its extensions are positive
+    and not decomposable. This is proved in Lean and discharges the Letter's `ReadCap` hypothesis
+    in that direction for the (3,3), (3,4), (4,3) and (4,4) genres.
 
 ## 1. Replication
 
@@ -174,9 +175,9 @@ Label: Exact computations, given the Letter's own assignments. Hook:
 | 60 random mirror-symmetric webs | 60 of 60 reflection positive |
 | Symmetry-breaking controls | 50 of 59 fail. All 9 survivors are explained: either a repeated projection, or a positive operator acting on a flat state. |
 
-## 7. The (3,3) link type is dark
+## 7. Every link type with both ends at least 3 is dark
 
-Label: Verified. Hook: `lean/ChoiDark.lean`, 29 theorems.
+Label: Verified. Hook: `lean/ChoiDark.lean`, 35 theorems.
 
 The Letter calls a type readable when every positive map between its ends is decomposable, and
 carries the read cap (readable ⇔ d₁d₂ ≤ 6) as a named hypothesis citing Størmer, Woronowicz and
@@ -189,7 +190,10 @@ Choi. `ChoiDark.lean` proves the (3,3) instance of the dark direction:
   squares on every X ↦ KXKᴴ and every X ↦ LXᵀLᴴ, but −1/14 on the Choi map. So the Choi map is
   not decomposable.
 - **Corollaries.** `dark_33`. Also, ρ₇/₂ is PPT and entangled.
-- **Not covered.** The (2,4) case (Woronowicz's map), the embedding into larger types, and the
+- **Extension.** `dark_of_three_le`: for all d₁, d₂ ≥ 3, X ↦ J₂ Φ(J₁ᴴ X J₁) J₂ᴴ is positive and not
+  decomposable, since a decomposition would compress to one of the Choi map. This covers Chain
+  Theory's (3,3), (3,4), (4,3) and (4,4) genres, so 3 of its 4 dark sectors.
+- **Not covered.** The (2,d) cases with d ≥ 4 (Woronowicz's map; the (2,4) weak genre), and the
   readable direction (Størmer, Woronowicz).
 
 ## Sources

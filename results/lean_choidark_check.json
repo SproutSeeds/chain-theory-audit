@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-26T01:43:55+00:00",
+  "checked_at": "2026-10-26T02:43:23+00:00",
   "source": "lean/ChoiDark.lean",
-  "source_sha256": "e991a7b1bc339048b74321f3354b01a5b66458b21389b2ba97471f1d16e382e8",
+  "source_sha256": "c3c91ccd26bb7e81fcb25d1dbbd264885f4ea16f0e7f6d2cc8073309db4fccc7",
   "lean_version": "Lean (version 4.26.0, arm64-apple-darwin24.6.0, commit d8204c9fd894f91bbb2cdfec5912ec8196fd8562, Release)",
   "mathlib_rev": "v4.26.0",
   "mathlib_commit": "2df2f0150c275ad53cb3c90f7c98ec15a56a1a67",
@@ -9,7 +9,7 @@
   "errors": 0,
   "warnings": 0,
   "sorry_in_source": 0,
-  "theorems": 29,
+  "theorems": 35,
   "axioms": {
     "ChoiDark.choi_real": [
       "propext",
@@ -52,6 +52,11 @@
       "Quot.sound"
     ],
     "ChoiDark.dark_33": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ChoiDark.dark_of_three_le": [
       "propext",
       "Classical.choice",
       "Quot.sound"

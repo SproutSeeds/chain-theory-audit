@@ -10,7 +10,7 @@ python3 scripts/check_lean.py          # writes results/lean_*_check.json
 
 To use another Lake project with Mathlib v4.26.0 built, set `MATHLIB_PROJECT`.
 
-## ChoiDark.lean: the (3,3) link type is dark
+## ChoiDark.lean: every link type with both ends at least 3 is dark
 
 | Declaration | Statement |
 |---|---|
@@ -21,10 +21,10 @@ To use another Lake project with Mathlib v4.26.0 built, set `MATHLIB_PROJECT`.
 | `choi_not_decomposable` | No finite families give `Φ(X) = Σ K X Kᴴ + Σ L Xᵀ Lᴴ` |
 | `rho_entangled` | `ρ` is not a nonnegative combination of product states |
 | `dark_33` | There is a positive, non-decomposable map on `M₃(ℂ)` |
+| `extendChoi_positive`, `extendChoi_not_decomposable`, `dark_of_three_le` | For all `d₁, d₂ ≥ 3`, the Choi map extended by `X ↦ J₂ Φ(J₁ᴴ X J₁) J₂ᴴ` is positive and not decomposable, so every type with both ends at least 3 is dark |
 
-- **Scope.** The result is classical: Choi 1975, and the Horodecki family. The (2,4) case, the
-  embedding into larger types, and the readable direction (Størmer, Woronowicz) are not
-  formalized.
+- **Scope.** The result is classical: Choi 1975, and the Horodecki family. The (2,d) cases with
+  d ≥ 4 (Woronowicz's map) and the readable direction (Størmer, Woronowicz) are not formalized.
 - **Decomposability** is stated with Kraus families.
 
 ## ChainRP.lean: reflection positivity of mirror-symmetric webs

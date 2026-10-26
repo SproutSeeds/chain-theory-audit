@@ -18,11 +18,13 @@ the (3,3) instance of the dark direction from scratch, with Choi's map:
   Part 4  The witness tr(ρ C_Φ) is ≥ 0 on every map X ↦ K X Kᴴ and every map X ↦ L Xᵀ Lᴴ, but equals
           -1/14 on the Choi map. Hence the Choi map is not decomposable.
   Part 5  Corollaries: the (3,3) type is dark; ρ is PPT and entangled.
+  Part 6  Every type with both ends of dimension at least three is dark: the Choi map extends to a
+          positive, non-decomposable map M_{d₁} → M_{d₂} for all d₁, d₂ ≥ 3.
 
 Mathematical status: classical (Choi, Linear Algebra Appl. 12, 95 (1975); Horodecki, Horodecki and
 Horodecki, PRL 80, 5239 (1998) and Phys. Lett. A 223, 1 (1996)). New here is the formal check.
-Not formalized: the (2,4) case (Woronowicz's map), the embedding to larger types, and the readable
-direction d₁ d₂ ≤ 6 (Størmer 1963, Woronowicz 1976).
+Not formalized: the (2,d) cases with d ≥ 4 (Woronowicz's map), and the readable direction
+d₁ d₂ ≤ 6 (Størmer 1963, Woronowicz 1976).
 
 Check: from a Lake project with Mathlib v4.26.0 built, `lake env lean ChoiDark.lean`.
 -/
@@ -379,6 +381,87 @@ theorem dark_33 : ∃ Φ : M3 → M3,
     ¬ ∃ (m n : ℕ) (K : Fin m → M3) (L : Fin n → M3), ∀ X, Φ X = ∑ k, K k * X * (K k)ᴴ + ∑ l, L l * Xᵀ * (L l)ᴴ :=
   ⟨choiMap, fun _ B w => choi_positive_psd B w, choi_not_decomposable⟩
 
+
+/-! ## Part 6. Every type with both ends of dimension at least three is dark
+
+The Choi map on `M₃` extends to `M_{d₁} → M_{d₂}` for all `d₁, d₂ ≥ 3` by `X ↦ J₂ Φ(J₁ᴴ X J₁) J₂ᴴ`, where
+`Jᵢ` includes `ℂ³` as the first three coordinates. The extension is positive, and a decomposition of it
+would compress to one of the Choi map. -/
+
+/-- The inclusion of `ℂ³` into `ℂᵈ` as the first three coordinates. -/
+def incl (d : ℕ) : Matrix (Fin d) (Fin 3) ℂ := fun i j => if (i : ℕ) = (j : ℕ) then 1 else 0
+
+theorem incl_conjTranspose_mul_incl {d : ℕ} (h : 3 ≤ d) : (incl d)ᴴ * incl d = 1 := by
+  ext a b
+  simp only [Matrix.mul_apply, Matrix.conjTranspose_apply, incl, Matrix.one_apply]
+  rw [Finset.sum_eq_single ⟨a, by omega⟩]
+  · fin_cases a <;> fin_cases b <;> simp
+  · intro i _ hi
+    have : (i : ℕ) ≠ (a : ℕ) := fun h' => hi (Fin.ext h')
+    simp [this]
+  · simp
+
+theorem incl_transpose (d : ℕ) : (incl d)ᵀ = (incl d)ᴴ := by
+  ext a b
+  simp only [Matrix.transpose_apply, Matrix.conjTranspose_apply, incl]
+  split_ifs <;> simp
+
+/-- The extension of the Choi map to `M_{d₁} → M_{d₂}`. -/
+noncomputable def extendChoi (d₁ d₂ : ℕ) (X : Matrix (Fin d₁) (Fin d₁) ℂ) : Matrix (Fin d₂) (Fin d₂) ℂ :=
+  incl d₂ * choiMap ((incl d₁)ᴴ * X * incl d₁) * (incl d₂)ᴴ
+
+theorem quad_conj {n p : Type*} [Fintype n] [Fintype p] (J : Matrix n p ℂ) (M : Matrix p p ℂ) (w : n → ℂ) :
+    star w ⬝ᵥ ((J * M * Jᴴ) *ᵥ w) = star (Jᴴ *ᵥ w) ⬝ᵥ (M *ᵥ (Jᴴ *ᵥ w)) := by
+  rw [Matrix.star_mulVec, Matrix.conjTranspose_conjTranspose, ← Matrix.mulVec_mulVec,
+    ← Matrix.mulVec_mulVec, Matrix.dotProduct_mulVec]
+
+/-- The extension is positive. -/
+theorem extendChoi_positive (d₁ d₂ : ℕ) {m : ℕ} (B : Matrix (Fin m) (Fin d₁) ℂ) (w : Fin d₂ → ℂ) :
+    0 ≤ (star w ⬝ᵥ (extendChoi d₁ d₂ (Bᴴ * B) *ᵥ w)).re := by
+  unfold extendChoi
+  rw [quad_conj]
+  have hB : (incl d₁)ᴴ * (Bᴴ * B) * incl d₁ = (B * incl d₁)ᴴ * (B * incl d₁) := by
+    simp only [Matrix.conjTranspose_mul, Matrix.mul_assoc]
+  rw [hB]
+  exact choi_positive_psd _ _
+
+/-- The extension is not decomposable. -/
+theorem extendChoi_not_decomposable {d₁ d₂ : ℕ} (h₁ : 3 ≤ d₁) (h₂ : 3 ≤ d₂) :
+    ¬ ∃ (m n : ℕ) (K : Fin m → Matrix (Fin d₂) (Fin d₁) ℂ) (L : Fin n → Matrix (Fin d₂) (Fin d₁) ℂ),
+      ∀ X, extendChoi d₁ d₂ X = ∑ k, K k * X * (K k)ᴴ + ∑ l, L l * Xᵀ * (L l)ᴴ := by
+  rintro ⟨m, n, K, L, h⟩
+  apply choi_not_decomposable
+  refine ⟨m, n, fun k => (incl d₂)ᴴ * K k * incl d₁, fun l => (incl d₂)ᴴ * L l * incl d₁, fun Y => ?_⟩
+  have hc : choiMap Y = (incl d₂)ᴴ * extendChoi d₁ d₂ (incl d₁ * Y * (incl d₁)ᴴ) * incl d₂ := by
+    unfold extendChoi
+    have e₁ : (incl d₁)ᴴ * (incl d₁ * Y * (incl d₁)ᴴ) * incl d₁ = Y := by
+      rw [show (incl d₁)ᴴ * (incl d₁ * Y * (incl d₁)ᴴ) * incl d₁
+          = ((incl d₁)ᴴ * incl d₁) * Y * ((incl d₁)ᴴ * incl d₁) by simp only [Matrix.mul_assoc],
+        incl_conjTranspose_mul_incl h₁, Matrix.one_mul, Matrix.mul_one]
+    rw [e₁]
+    rw [show (incl d₂)ᴴ * (incl d₂ * choiMap Y * (incl d₂)ᴴ) * incl d₂
+        = ((incl d₂)ᴴ * incl d₂) * choiMap Y * ((incl d₂)ᴴ * incl d₂) by simp only [Matrix.mul_assoc],
+      incl_conjTranspose_mul_incl h₂, Matrix.one_mul, Matrix.mul_one]
+  rw [hc, h, Matrix.mul_add, Matrix.add_mul, Matrix.mul_sum, Matrix.sum_mul, Matrix.mul_sum, Matrix.sum_mul]
+  congr 1
+  · refine Finset.sum_congr rfl fun k _ => ?_
+    simp only [Matrix.conjTranspose_mul, Matrix.conjTranspose_conjTranspose, Matrix.mul_assoc]
+  · refine Finset.sum_congr rfl fun l _ => ?_
+    have hreal : ((incl d₁)ᴴ)ᵀ = incl d₁ := by
+      rw [← incl_transpose, Matrix.transpose_transpose]
+    rw [Matrix.transpose_mul, Matrix.transpose_mul, hreal, incl_transpose]
+    simp only [Matrix.conjTranspose_mul, Matrix.conjTranspose_conjTranspose, Matrix.mul_assoc]
+
+/-- **Every type with both ends of dimension at least three is dark**: for all `d₁, d₂ ≥ 3` there is
+a positive map `M_{d₁}(ℂ) → M_{d₂}(ℂ)` that is not decomposable. This covers Chain Theory's (3,3), (3,4),
+(4,3) and (4,4) genres; the (2,4) genre needs a separate map (Woronowicz's). -/
+theorem dark_of_three_le {d₁ d₂ : ℕ} (h₁ : 3 ≤ d₁) (h₂ : 3 ≤ d₂) :
+    ∃ Φ : Matrix (Fin d₁) (Fin d₁) ℂ → Matrix (Fin d₂) (Fin d₂) ℂ,
+      (∀ (m : ℕ) (B : Matrix (Fin m) (Fin d₁) ℂ) (w : Fin d₂ → ℂ), 0 ≤ (star w ⬝ᵥ (Φ (Bᴴ * B) *ᵥ w)).re) ∧
+      ¬ ∃ (m n : ℕ) (K : Fin m → Matrix (Fin d₂) (Fin d₁) ℂ) (L : Fin n → Matrix (Fin d₂) (Fin d₁) ℂ),
+        ∀ X, Φ X = ∑ k, K k * X * (K k)ᴴ + ∑ l, L l * Xᵀ * (L l)ᴴ :=
+  ⟨extendChoi d₁ d₂, fun _ B w => extendChoi_positive d₁ d₂ B w, extendChoi_not_decomposable h₁ h₂⟩
+
 end ChoiDark
 
 #print axioms ChoiDark.choi_real
@@ -390,3 +473,4 @@ end ChoiDark
 #print axioms ChoiDark.rho_ppt
 #print axioms ChoiDark.rho_entangled
 #print axioms ChoiDark.dark_33
+#print axioms ChoiDark.dark_of_three_le

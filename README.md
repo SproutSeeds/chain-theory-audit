@@ -14,7 +14,7 @@ The results are in **[REPORT.md](REPORT.md)**. In brief:
 | Against the unexpanded CODATA inputs the candidate is 1.4σ off (0.6σ with CODATA's ×2.5 expansion) | Verified |
 | The photon identification conflicts with the program's own charge assignment, unbroken generator and weak angle | Exact, given the Letter's assignments |
 | Maximally entangled links straight across a mirror are Osterwalder–Schrader reflection positive (Lean) | Verified |
-| The (3,3) link type is dark: the Choi map is positive and not decomposable (Lean) | Verified |
+| Every link type with both ends at least 3 is dark: the Choi map and its extensions are positive and not decomposable (Lean) | Verified |
 | A timestamped ledger of the theory's numbers, fixed before new measurements | Verified (values) |
 
 ## Reproduce
