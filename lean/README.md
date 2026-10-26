@@ -1,6 +1,6 @@
 # Lean files
 
-Lean 4.26.0 with Mathlib v4.26.0. All three files check with no `sorry`, and every reported declaration
+Lean 4.26.0 with Mathlib v4.26.0. All four files check with no `sorry`, and every reported declaration
 depends only on the standard axioms (`propext`, `Classical.choice`, `Quot.sound`).
 
 ```sh
@@ -60,6 +60,23 @@ linear map M₂ → M₃ is decomposable (Woronowicz 1976; not formalized here).
 - **Prior art.** P. Horodecki and Woronowicz's results are classical. A Lean proof that 2×2 PPT
   matrices are separable (Størmer's theorem in state form, by a different route) is in
   physical-superintelligence/oqp-batch-2026. We know of no formal proof of the 2×3 case.
+
+## Duality.lean: from separable PPT states to decomposable maps
+
+`ReadCap.lean` needs Woronowicz's theorem for maps; the literature proves it for states (every PPT
+state on ℂ²⊗ℂ³ is separable). This file bridges the two. 51 theorems; imports `ReadCap`.
+
+| Declaration | Statement |
+|---|---|
+| `hermitian_of_im_quad`, `positive_conjTranspose`, `choi_hermitian` | A real quadratic form means a Hermitian matrix; positive maps preserve Hermiticity, so their Choi matrices are Hermitian |
+| `choi_block_positive` | The Choi matrix of a positive map is nonnegative on product vectors |
+| `isClosed_decCone` | The cone {P + Q^Γ : P, Q ⪰ 0} is closed (its bounded-trace slices are images of compact sets) |
+| `decomposable_of_choi_mem` | A Choi matrix in that cone gives Kraus families, via the Gram factorization P = B†B |
+| `allDecomposable_of_allPPTSeparable` | **If every PPT state on ℂⁿ⊗ℂᵐ is separable, every positive map Mₙ → Mₘ is decomposable** (complex Hahn–Banach: a Choi matrix outside the cone is negative on some PPT state) |
+| `readcap_of_pptSeparable23` | **The Letter's read cap follows from the state form of Woronowicz's theorem** |
+
+- The converse (decomposability of all positive maps implies PPT = separable) is classical too but
+  is not formalized here.
 
 ## ChainRP.lean: reflection positivity of mirror-symmetric webs
 

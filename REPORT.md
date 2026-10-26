@@ -217,6 +217,10 @@ Choi. `ChoiDark.lean` proves the (3,3) instance of the dark direction:
   Letter's own readability, the read cap holds exactly when every positive map M₂ → M₃ is
   decomposable (Woronowicz 1976), which is not formalized here. Compression and Hilbert–Schmidt
   adjoints reduce (2,2) and (3,2) to (2,3). 18 theorems.
+- **States to maps.** `Duality.lean` proves that if every PPT state on ℂⁿ⊗ℂᵐ is separable, every
+  positive map Mₙ → Mₘ is decomposable (Hahn–Banach, with the decomposable cone shown closed). So the
+  read cap follows from the state form of Woronowicz's theorem, the form the literature proves.
+  51 theorems.
 
 ## 8. Readable as a two-mirror test, and how rare darkness is
 

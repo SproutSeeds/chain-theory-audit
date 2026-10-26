@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-26T09:40:25+00:00",
+  "source": "lean/Duality.lean",
+  "source_sha256": "916ebdd216aef880bb2ef771d9031004d72325790e4904133d326ad5ab0e24b8",
+  "lean_version": "Lean (version 4.26.0, arm64-apple-darwin24.6.0, commit d8204c9fd894f91bbb2cdfec5912ec8196fd8562, Release)",
+  "mathlib_rev": "v4.26.0",
+  "mathlib_commit": "2df2f0150c275ad53cb3c90f7c98ec15a56a1a67",
+  "returncode": 0,
+  "errors": 0,
+  "warnings": 0,
+  "sorry_in_source": 0,
+  "theorems": 51,
+  "axioms": {
+    "ChainDuality.hermitian_of_im_quad": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ChainDuality.positive_conjTranspose": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ChainDuality.decomposable_of_choi_mem": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ChainDuality.isClosed_decCone": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ChainDuality.allDecomposable_of_allPPTSeparable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ChainDuality.readcap_of_pptSeparable23": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "standard_axioms_only": true,
+  "pass": true
+}
