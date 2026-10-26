@@ -207,7 +207,10 @@ Choi. `ChoiDark.lean` proves the (3,3) instance of the dark direction:
   held vacuously: its `Readable` ranged over all functions and its positivity asked only for a
   nonnegative real part, so no type was readable (`lean/evidence/VacuityDemo.lean`). The
   definitions now use linear maps and positive semidefiniteness; the concrete maps were unaffected.
-- **Not covered.** The readable direction (Størmer, Woronowicz).
+- **The readable direction.** `ReadCap.lean` proves `ReadCap Readable ↔ Woronowicz23`: for the
+  Letter's own readability, the read cap holds exactly when every positive map M₂ → M₃ is
+  decomposable (Woronowicz 1976), which is not formalized here. Compression and Hilbert–Schmidt
+  adjoints reduce (2,2) and (3,2) to (2,3). 18 theorems.
 
 ## Sources
 

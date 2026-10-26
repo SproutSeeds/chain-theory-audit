@@ -11,11 +11,14 @@ import os
 import re
 import subprocess
 import sys
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-FILES = {"ChainRP": ("ChainRP", "lean_chainrp_check.json"), "ChoiDark": ("ChoiDark", "lean_choidark_check.json")}
+FILES = {"ChainRP": ("ChainRP", "lean_chainrp_check.json"), "ChoiDark": ("ChoiDark", "lean_choidark_check.json"),
+         "ReadCap": ("ChainReadCap", "lean_readcap_check.json")}
+DEPS = {"ReadCap": ["ChoiDark"]}   # local modules compiled to .olean first, into a temporary directory
 PROJECT = Path(os.environ.get("MATHLIB_PROJECT", str(ROOT / "lean")))
 STANDARD = {"propext", "Classical.choice", "Quot.sound"}
 ENCODE = json.JSONEncoder(indent=2).encode
@@ -24,7 +27,15 @@ def check(name):
     ns, out_name = FILES[name]
     SRC = ROOT / "lean" / f"{name}.lean"
     OUT = ROOT / "results" / out_name
-    run = subprocess.run(["lake", "env", "lean", str(SRC)], cwd=PROJECT, capture_output=True, text=True)
+    env = dict(os.environ)
+    build = tempfile.TemporaryDirectory()
+    for dep in DEPS.get(name, []):
+        subprocess.run(["lake", "env", "lean", f"--root={ROOT / 'lean'}", "-o", f"{build.name}/{dep}.olean",
+                        str(ROOT / "lean" / f"{dep}.lean")], cwd=PROJECT, capture_output=True, text=True, check=True)
+    if DEPS.get(name):
+        env["LEAN_PATH"] = build.name
+    run = subprocess.run(["lake", "env", "lean", str(SRC)], cwd=PROJECT, capture_output=True, text=True, env=env)
+    build.cleanup()
     version = subprocess.run(["lake", "env", "lean", "--version"], cwd=PROJECT,
                              capture_output=True, text=True).stdout.strip()
     manifest = json.loads((PROJECT / "lake-manifest.json").read_text())

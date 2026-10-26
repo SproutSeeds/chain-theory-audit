@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-26T08:31:35+00:00",
+  "source": "lean/ReadCap.lean",
+  "source_sha256": "1e2ac9bf7502f5a38007ec18c0ce68f334eaaf45959b4e2f799fce4fab641e25",
+  "lean_version": "Lean (version 4.26.0, arm64-apple-darwin24.6.0, commit d8204c9fd894f91bbb2cdfec5912ec8196fd8562, Release)",
+  "mathlib_rev": "v4.26.0",
+  "mathlib_commit": "2df2f0150c275ad53cb3c90f7c98ec15a56a1a67",
+  "returncode": 0,
+  "errors": 0,
+  "warnings": 0,
+  "sorry_in_source": 0,
+  "theorems": 18,
+  "axioms": {
+    "ChainReadCap.allDecomposable_mono": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ChainReadCap.adj_positive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ChainReadCap.decomposable_of_adj": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ChainReadCap.readcap_iff_woronowicz": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ChainReadCap.readable_one_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ChainReadCap.twist_not_positive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "standard_axioms_only": true,
+  "pass": true
+}

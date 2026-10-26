@@ -39,6 +39,7 @@ Recorded outputs are in `results/`.
 - The measurements due from electron g−2 and atom-recoil experiments will decide the candidate.
 - The Lean results are classical mathematics; what is new is the formal check:
   - Choi 1975 and the Horodecki family for `ChoiDark.lean`;
+  - Woronowicz 1976 for `ReadCap.lean`, which reduces the read cap to his M₂ → M₃ theorem;
   - Lieb 1989 and Lieb–Schupp for `ChainRP.lean`.
 
 Corrections are welcome by issue.

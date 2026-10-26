@@ -1,6 +1,6 @@
 # Lean files
 
-Lean 4.26.0 with Mathlib v4.26.0. Both files check with no `sorry`, and every reported declaration
+Lean 4.26.0 with Mathlib v4.26.0. All three files check with no `sorry`, and every reported declaration
 depends only on the standard axioms (`propext`, `Classical.choice`, `Quot.sound`).
 
 ```sh
@@ -40,8 +40,26 @@ To use another Lake project with Mathlib v4.26.0 built, set `MATHLIB_PROJECT`.
 
 - **Scope.** The existence results are classical: Choi 1975, Woronowicz 1976, and the Horodecki
   families. The explicit integer (2,4) map and its certificate are new here. The readable direction
-  d₁d₂ ≤ 6 (Størmer, Woronowicz) is not formalized.
+  d₁d₂ ≤ 6 (Størmer, Woronowicz) is reduced to one theorem in `ReadCap.lean` (below).
 - **Decomposability** is stated with Kraus families.
+
+## ReadCap.lean: the read cap is equivalent to Woronowicz's theorem
+
+`ReadCap` is copied verbatim from the Letter's `ChainAlpha.lean`. `Woronowicz23` says every positive
+linear map M₂ → M₃ is decomposable (Woronowicz 1976; not formalized here). `ReadCap.lean` imports
+`ChoiDark` (the check script compiles it first). 18 theorems.
+
+| Declaration | Statement |
+|---|---|
+| `allDecomposable_mono`, `stormer_of_woronowicz` | Compression: if every positive map M_n → M_m is decomposable, so is every positive map M_{n'} → M_{m'} with n' ≤ n, m' ≤ m; so Woronowicz's theorem gives Størmer's (M₂ → M₂) |
+| `adj_positive`, `decomposable_of_adj`, `allDecomposable_symm` | The Hilbert–Schmidt adjoint of a positive map is positive, and a map is decomposable when its adjoint is; so M_n → M_m and M_m → M_n stand or fall together |
+| `readable_iff_allDecomposable` | Readability is decomposability of all positive maps in one direction |
+| `readcap_iff_woronowicz` | **`ReadCap Readable ↔ Woronowicz23`**: for the Letter's own notion of readability, the read cap is equivalent to Woronowicz's theorem |
+| `readable_one_one`, `twist_not_positive` | Regression guards for the corrected definitions: the readable predicate is satisfiable, and X ↦ (1 + i) X is not positive |
+
+- **Prior art.** P. Horodecki and Woronowicz's results are classical. A Lean proof that 2×2 PPT
+  matrices are separable (Størmer's theorem in state form, by a different route) is in
+  physical-superintelligence/oqp-batch-2026. We know of no formal proof of the 2×3 case.
 
 ## ChainRP.lean: reflection positivity of mirror-symmetric webs
 
