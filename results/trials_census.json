@@ -1,0 +1,4710 @@
+{
+ "summary": {
+  "definition_combinations": 1492992,
+  "distinct_raw_readouts": 12574,
+  "distinct_values": 9275,
+  "base_multiplicity": 2,
+  "within_relative": {
+   "1%": 38,
+   "0.1%": 5,
+   "1e-4": 2,
+   "1e-6": 1,
+   "1e-8": 1
+  },
+  "within_1sigma_codata": [
+   {
+    "inverse": 137.03599918956616,
+    "readout": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     31104
+    ],
+    "combinations": 2
+   }
+  ],
+  "distinct_values_with_inverse_in_130_145": 200,
+  "density_per_unit_inverse_near_137": 13.333333333333334,
+  "expected_chance_1sigma_hits_in_this_space": 5.6e-07,
+  "search_size_factor_for_even_odds": 1232142.857142857,
+  "nearest_other_values": [
+   {
+    "inverse": 137.044386,
+    "readout": [
+     {
+      "1": 82,
+      "36": 42,
+      "81": 48
+     },
+     104976
+    ],
+    "combinations": 6
+   },
+   {
+    "inverse": 137.055891,
+    "readout": [
+     {
+      "1": 63,
+      "2": 3
+     },
+     9216
+    ],
+    "combinations": 432
+   },
+   {
+    "inverse": 137.06247,
+    "readout": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 36,
+      "6": 6
+     },
+     31104
+    ],
+    "combinations": 6
+   },
+   {
+    "inverse": 137.099922,
+    "readout": [
+     {
+      "1": 82,
+      "2": 51,
+      "3": 42
+     },
+     31104
+    ],
+    "combinations": 6
+   },
+   {
+    "inverse": 137.184254,
+    "readout": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 51
+     },
+     31104
+    ],
+    "combinations": 30
+   },
+   {
+    "inverse": 136.879672,
+    "readout": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 36,
+      "4": 9
+     },
+     31104
+    ],
+    "combinations": 2
+   },
+   {
+    "inverse": 137.223529,
+    "readout": [
+     {
+      "1": 79,
+      "4": 36,
+      "9": 51,
+      "36": 6
+     },
+     46656
+    ],
+    "combinations": 18
+   },
+   {
+    "inverse": 136.800535,
+    "readout": [
+     {
+      "1": 79,
+      "2": 54,
+      "4": 36
+     },
+     31104
+    ],
+    "combinations": 64
+   },
+   {
+    "inverse": 137.324503,
+    "readout": [
+     {
+      "1": 79,
+      "9": 31,
+      "81": 48
+     },
+     82944
+    ],
+    "combinations": 52
+   },
+   {
+    "inverse": 137.34293,
+    "readout": [
+     {
+      "1": 79,
+      "2": 6,
+      "3": 76,
+      "6": 3
+     },
+     31104
+    ],
+    "combinations": 2
+   }
+  ]
+ },
+ "lean_validation": {
+  "singles": 20,
+  "pairs": 165,
+  "skipped_pairs": 6,
+  "agree": 185,
+  "checked": 185,
+  "disagreements": [],
+  "cases": [
+   {
+    "mutations": [
+     "BASE"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 90,
+      "4": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 90,
+      "4": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_where_letters_sit"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 54,
+      "3": 36,
+      "4": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 54,
+      "3": 36,
+      "4": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "Y_at_center"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 90,
+      "9": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 90,
+      "9": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_Y_factors_swapped"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "moved_per_letter"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 36,
+      "6": 9
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 36,
+      "6": 9
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "copies_separate"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 42,
+      "6": 51
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 42,
+      "6": 51
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "survival_ignores_own_sign"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutator_records_carry_no_reads"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 51,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 51,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "register_full_unread"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "no_commutator_records"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutators_keep_sums"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 45
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 45
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutators_keep_both"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 45,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 45,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "exch_shift1"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "drop_fixed"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 31,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 31,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "drop_even"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 11,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 11,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 42,
+      "36": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 42,
+      "36": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "reads_at_qubit"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "X_at_far_end"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 90,
+      "4": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 90,
+      "4": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "X_where_letters_sit"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 54,
+      "3": 36,
+      "4": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 54,
+      "3": 36,
+      "4": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "Y_at_center"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 90,
+      "9": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 90,
+      "9": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "X_Y_factors_swapped"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "moved_per_letter"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 36,
+      "6": 9
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 36,
+      "6": 9
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "copies_separate"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 42,
+      "6": 51
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 42,
+      "6": 51
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "survival_ignores_own_sign"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "commutator_records_carry_no_reads"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 51,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 51,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "register_full_unread"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "no_commutator_records"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "commutators_keep_sums"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 45
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 45
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "commutators_keep_both"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 45,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 45,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "exch_shift1"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "drop_fixed"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 31,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 31,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "drop_even"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 11,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 11,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 42,
+      "36": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 42,
+      "36": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "fixesFar_always_true",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "X_at_far_end"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "X_where_letters_sit"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "Y_at_center"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "X_Y_factors_swapped"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "moved_per_letter"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 54,
+      "4": 36
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 54,
+      "4": 36
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "copies_separate"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 42,
+      "6": 48
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 42,
+      "6": 48
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "survival_ignores_own_sign"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "commutator_records_carry_no_reads"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "register_full_unread"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "no_commutator_records"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "commutators_keep_sums"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "commutators_keep_both"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "exch_shift1"
+    ],
+    "lean": [
+     {
+      "1": 252,
+      "2": 8
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 252,
+      "2": 8
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "drop_fixed"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 79
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 79
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "drop_even"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 11
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 11
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "4": 90
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "4": 90
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "reads_at_qubit",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end",
+     "X_where_letters_sit"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 90,
+      "4": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 90,
+      "4": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end",
+     "Y_at_center"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end",
+     "X_Y_factors_swapped"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 90,
+      "4": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 90,
+      "4": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end",
+     "moved_per_letter"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 84,
+      "4": 9
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 84,
+      "4": 9
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end",
+     "copies_separate"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 42,
+      "4": 3,
+      "6": 48
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 42,
+      "4": 3,
+      "6": 48
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end",
+     "survival_ignores_own_sign"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "2": 90
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "2": 90
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end",
+     "commutator_records_carry_no_reads"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 93
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 93
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end",
+     "register_full_unread"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 90,
+      "4": 3
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 90,
+      "4": 3
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end",
+     "no_commutator_records"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 90
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end",
+     "commutators_keep_sums"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 93
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 93
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end",
+     "commutators_keep_both"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 93,
+      "4": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 93,
+      "4": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end",
+     "exch_shift1"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "2": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "2": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end",
+     "drop_fixed"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 79,
+      "4": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 79,
+      "4": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end",
+     "drop_even"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 11,
+      "4": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 11,
+      "4": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "4": 90,
+      "16": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "4": 90,
+      "16": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_at_far_end",
+     "wX_dA_equiv"
+    ],
+    "status": "conflict"
+   },
+   {
+    "mutations": [
+     "X_where_letters_sit",
+     "Y_at_center"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 6,
+      "3": 84,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 6,
+      "3": 84,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_where_letters_sit",
+     "X_Y_factors_swapped"
+    ],
+    "status": "conflict"
+   },
+   {
+    "mutations": [
+     "X_where_letters_sit",
+     "moved_per_letter"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 36,
+      "4": 9
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 36,
+      "4": 9
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_where_letters_sit",
+     "copies_separate"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 6,
+      "3": 36,
+      "4": 3,
+      "6": 48
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 6,
+      "3": 36,
+      "4": 3,
+      "6": 48
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_where_letters_sit",
+     "survival_ignores_own_sign"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "2": 54,
+      "3": 36
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "2": 54,
+      "3": 36
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_where_letters_sit",
+     "commutator_records_carry_no_reads"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 57,
+      "3": 36
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 57,
+      "3": 36
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_where_letters_sit",
+     "register_full_unread"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 54,
+      "3": 36,
+      "4": 3
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 54,
+      "3": 36,
+      "4": 3
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_where_letters_sit",
+     "no_commutator_records"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 54,
+      "3": 36
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 54,
+      "3": 36
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_where_letters_sit",
+     "commutators_keep_sums"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 57,
+      "3": 36
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 57,
+      "3": 36
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_where_letters_sit",
+     "commutators_keep_both"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 57,
+      "3": 36,
+      "4": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 57,
+      "3": 36,
+      "4": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_where_letters_sit",
+     "exch_shift1"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "2": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "2": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_where_letters_sit",
+     "drop_fixed"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 51,
+      "3": 28,
+      "4": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 51,
+      "3": 28,
+      "4": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_where_letters_sit",
+     "drop_even"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 3,
+      "3": 8,
+      "4": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 3,
+      "3": 8,
+      "4": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_where_letters_sit",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "4": 54,
+      "9": 36,
+      "16": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "4": 54,
+      "9": 36,
+      "16": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_where_letters_sit",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 54,
+      "3": 36,
+      "4": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 54,
+      "3": 36,
+      "4": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "Y_at_center",
+     "X_Y_factors_swapped"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "Y_at_center",
+     "moved_per_letter"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 84,
+      "9": 9
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 84,
+      "9": 9
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "Y_at_center",
+     "copies_separate"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 42,
+      "9": 51
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 42,
+      "9": 51
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "Y_at_center",
+     "survival_ignores_own_sign"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "3": 90
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "3": 90
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "Y_at_center",
+     "commutator_records_carry_no_reads"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 93
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 93
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "Y_at_center",
+     "register_full_unread"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 90,
+      "9": 3
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 90,
+      "9": 3
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "Y_at_center",
+     "no_commutator_records"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 90
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 90
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "Y_at_center",
+     "commutators_keep_sums"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 93
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 93
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "Y_at_center",
+     "commutators_keep_both"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 93,
+      "9": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 93,
+      "9": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "Y_at_center",
+     "exch_shift1"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "Y_at_center",
+     "drop_fixed"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 79,
+      "9": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 79,
+      "9": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "Y_at_center",
+     "drop_even"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 11,
+      "9": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 11,
+      "9": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "Y_at_center",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "9": 90,
+      "81": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "9": 90,
+      "81": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "Y_at_center",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 90,
+      "9": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 90,
+      "9": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_Y_factors_swapped",
+     "moved_per_letter"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 36,
+      "3": 48,
+      "6": 9
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 36,
+      "3": 48,
+      "6": 9
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_Y_factors_swapped",
+     "copies_separate"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_Y_factors_swapped",
+     "survival_ignores_own_sign"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "2": 42,
+      "3": 48
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "2": 42,
+      "3": 48
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_Y_factors_swapped",
+     "commutator_records_carry_no_reads"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 51
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 51
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_Y_factors_swapped",
+     "register_full_unread"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48,
+      "6": 3
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48,
+      "6": 3
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_Y_factors_swapped",
+     "no_commutator_records"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_Y_factors_swapped",
+     "commutators_keep_sums"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 45,
+      "3": 48
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 45,
+      "3": 48
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_Y_factors_swapped",
+     "commutators_keep_both"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 45,
+      "3": 48,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 45,
+      "3": 48,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_Y_factors_swapped",
+     "exch_shift1"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "2": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "2": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_Y_factors_swapped",
+     "drop_fixed"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 31,
+      "3": 48,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 31,
+      "3": 48,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_Y_factors_swapped",
+     "drop_even"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 11,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 11,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_Y_factors_swapped",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "4": 42,
+      "9": 48,
+      "36": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "4": 42,
+      "9": 48,
+      "36": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "X_Y_factors_swapped",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 42,
+      "3": 48,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "moved_per_letter",
+     "copies_separate"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "6": 57,
+      "9": 36
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "6": 57,
+      "9": 36
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "moved_per_letter",
+     "survival_ignores_own_sign"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 36,
+      "6": 6
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 36,
+      "6": 6
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "moved_per_letter",
+     "commutator_records_carry_no_reads"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 51,
+      "3": 36,
+      "6": 6
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 51,
+      "3": 36,
+      "6": 6
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "moved_per_letter",
+     "register_full_unread"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 36,
+      "6": 9
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 36,
+      "6": 9
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "moved_per_letter",
+     "no_commutator_records"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 36,
+      "6": 6
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 36,
+      "6": 6
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "moved_per_letter",
+     "commutators_keep_sums"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 39,
+      "6": 6
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 39,
+      "6": 6
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "moved_per_letter",
+     "commutators_keep_both"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 39,
+      "6": 9
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 39,
+      "6": 9
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "moved_per_letter",
+     "exch_shift1"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "moved_per_letter",
+     "drop_fixed"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 28,
+      "6": 6
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 28,
+      "6": 6
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "moved_per_letter",
+     "drop_even"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 8,
+      "6": 6
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 8,
+      "6": 6
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "moved_per_letter",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 36,
+      "36": 9
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 36,
+      "36": 9
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "moved_per_letter",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 36,
+      "6": 9
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 36,
+      "6": 9
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "copies_separate",
+     "survival_ignores_own_sign"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "3": 42,
+      "6": 48
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "3": 42,
+      "6": 48
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "copies_separate",
+     "commutator_records_carry_no_reads"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 3,
+      "3": 42,
+      "6": 48
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 3,
+      "3": 42,
+      "6": 48
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "copies_separate",
+     "register_full_unread"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 42,
+      "6": 51
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 42,
+      "6": 51
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "copies_separate",
+     "no_commutator_records"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 42,
+      "6": 48
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 42,
+      "6": 48
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "copies_separate",
+     "commutators_keep_sums"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 45,
+      "6": 48
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 45,
+      "6": 48
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "copies_separate",
+     "commutators_keep_both"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 45,
+      "6": 51
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 45,
+      "6": 51
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "copies_separate",
+     "exch_shift1"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "copies_separate",
+     "drop_fixed"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 31,
+      "6": 51
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 31,
+      "6": 51
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "copies_separate",
+     "drop_even"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 11,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 11,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "copies_separate",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "9": 42,
+      "36": 51
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "9": 42,
+      "36": 51
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "copies_separate",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 42,
+      "6": 51
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 42,
+      "6": 51
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "survival_ignores_own_sign",
+     "commutator_records_carry_no_reads"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "survival_ignores_own_sign",
+     "register_full_unread"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 42
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 42
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "survival_ignores_own_sign",
+     "no_commutator_records"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "survival_ignores_own_sign",
+     "commutators_keep_sums"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 51,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 51,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "survival_ignores_own_sign",
+     "commutators_keep_both"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "2": 51,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "2": 51,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "survival_ignores_own_sign",
+     "exch_shift1"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "survival_ignores_own_sign",
+     "drop_fixed"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 31
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 31
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "survival_ignores_own_sign",
+     "drop_even"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "3": 11
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "3": 11
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "survival_ignores_own_sign",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "4": 48,
+      "9": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "4": 48,
+      "9": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "survival_ignores_own_sign",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutator_records_carry_no_reads",
+     "register_full_unread"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 51,
+      "3": 42
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 51,
+      "3": 42
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutator_records_carry_no_reads",
+     "no_commutator_records"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutator_records_carry_no_reads",
+     "commutators_keep_sums"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutator_records_carry_no_reads",
+     "commutators_keep_both"
+    ],
+    "lean": [
+     {
+      "1": 82,
+      "2": 51,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 82,
+      "2": 51,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutator_records_carry_no_reads",
+     "exch_shift1"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutator_records_carry_no_reads",
+     "drop_fixed"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 51,
+      "3": 31
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 51,
+      "3": 31
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutator_records_carry_no_reads",
+     "drop_even"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 3,
+      "3": 11
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 3,
+      "3": 11
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutator_records_carry_no_reads",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "4": 51,
+      "9": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "4": 51,
+      "9": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutator_records_carry_no_reads",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 51,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 51,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "register_full_unread",
+     "no_commutator_records"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "register_full_unread",
+     "commutators_keep_sums"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 45
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 45
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "register_full_unread",
+     "commutators_keep_both"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 45,
+      "6": 3
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 45,
+      "6": 3
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "register_full_unread",
+     "exch_shift1"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "register_full_unread",
+     "drop_fixed"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 31,
+      "6": 3
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 31,
+      "6": 3
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "register_full_unread",
+     "drop_even"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 11,
+      "6": 3
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 11,
+      "6": 3
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "register_full_unread",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 42,
+      "36": 3
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 42,
+      "36": 3
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "register_full_unread",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     46656
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     46656
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "no_commutator_records",
+     "commutators_keep_sums"
+    ],
+    "status": "conflict"
+   },
+   {
+    "mutations": [
+     "no_commutator_records",
+     "commutators_keep_both"
+    ],
+    "status": "conflict"
+   },
+   {
+    "mutations": [
+     "no_commutator_records",
+     "exch_shift1"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "no_commutator_records",
+     "drop_fixed"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 31
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 31
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "no_commutator_records",
+     "drop_even"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 11
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 11
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "no_commutator_records",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "no_commutator_records",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 42
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutators_keep_sums",
+     "commutators_keep_both"
+    ],
+    "status": "conflict"
+   },
+   {
+    "mutations": [
+     "commutators_keep_sums",
+     "exch_shift1"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutators_keep_sums",
+     "drop_fixed"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 34
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 34
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutators_keep_sums",
+     "drop_even"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 14
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 14
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutators_keep_sums",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 45
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 45
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutators_keep_sums",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 45
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 45
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutators_keep_both",
+     "exch_shift1"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "3": 9
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "3": 9
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutators_keep_both",
+     "drop_fixed"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 34,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 34,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutators_keep_both",
+     "drop_even"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 14,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 14,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutators_keep_both",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 45,
+      "36": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 45,
+      "36": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "commutators_keep_both",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 45,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 45,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "exch_shift1",
+     "drop_fixed"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "exch_shift1",
+     "drop_even"
+    ],
+    "lean": [
+     {
+      "1": 60
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 60
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "exch_shift1",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "9": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "9": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "exch_shift1",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 117,
+      "3": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "drop_fixed",
+     "drop_even"
+    ],
+    "status": "conflict"
+   },
+   {
+    "mutations": [
+     "drop_fixed",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 31,
+      "36": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 31,
+      "36": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "drop_fixed",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 31,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "2": 48,
+      "3": 31,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "drop_even",
+     "born_weights"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "9": 11,
+      "36": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "9": 11,
+      "36": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "drop_even",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "3": 11,
+      "6": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "3": 11,
+      "6": 3
+     },
+     31104
+    ],
+    "agree": true
+   },
+   {
+    "mutations": [
+     "born_weights",
+     "wX_dA_equiv"
+    ],
+    "lean": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 42,
+      "36": 3
+     },
+     31104
+    ],
+    "engine": [
+     {
+      "1": 79,
+      "4": 48,
+      "9": 42,
+      "36": 3
+     },
+     31104
+    ],
+    "agree": true
+   }
+  ]
+ },
+ "table_validation": [
+  {
+   "alternative": "no weights",
+   "readout": [
+    {
+     "1": 172
+    },
+    31104
+   ],
+   "inverse": 180.837,
+   "table_S5": 180.837,
+   "agree": true
+  },
+  {
+   "alternative": "normalized by the 172 records",
+   "readout": [
+    {
+     "1": 79,
+     "2": 48,
+     "3": 42,
+     "6": 3
+    },
+    172
+   ],
+   "inverse": 0.758,
+   "table_S5": 0.758,
+   "agree": true
+  },
+  {
+   "alternative": "smallest readable configuration: two (2,2) reads at a shared qubit",
+   "readout": [
+    {
+     "1": 24,
+     "2": 30,
+     "4": 3
+    },
+    256
+   ],
+   "inverse": 3.535,
+   "table_S5": 3.535,
+   "agree": true
+  },
+  {
+   "configuration": "qutrit center, 2R 2R",
+   "readout_dim": 1296,
+   "table_S2": 1296,
+   "records": 172,
+   "agree": true
+  },
+  {
+   "configuration": "2R 2R 2U (the object)",
+   "readout_dim": 31104,
+   "table_S2": 31104,
+   "records": 172,
+   "agree": true
+  },
+  {
+   "configuration": "2R 2R 3U",
+   "readout_dim": 82944,
+   "table_S2": 82944,
+   "records": 172,
+   "agree": true
+  },
+  {
+   "configuration": "2R 2R 2U 2U",
+   "readout_dim": 746496,
+   "table_S2": 746496,
+   "records": 172,
+   "agree": true
+  },
+  {
+   "configuration": "2R 2R 2U 3U",
+   "readout_dim": 1990656,
+   "table_S2": 1990656,
+   "records": 172,
+   "agree": true
+  },
+  {
+   "configuration": "2R 2R 3U 3U",
+   "readout_dim": 5308416,
+   "table_S2": 5308416,
+   "records": 172,
+   "agree": true
+  },
+  {
+   "configuration": "qubit center, 2R 2R",
+   "readout_dim": 256,
+   "table_S2": 256,
+   "records": 57,
+   "agree": true
+  },
+  {
+   "configuration": "qubit center, 2R 2R 2U",
+   "readout_dim": 2304,
+   "table_S2": 2304,
+   "records": 57,
+   "agree": true
+  },
+  {
+   "configuration": "qubit center, 2R 2R 3U",
+   "readout_dim": 6144,
+   "table_S2": 6144,
+   "records": 57,
+   "agree": true
+  }
+ ],
+ "groups": {
+  "read_end": [
+   "rule",
+   "swapped"
+  ],
+  "wx": [
+   "read",
+   "far",
+   "dA"
+  ],
+  "kof": [
+   "std",
+   "letters_sit",
+   "swapped"
+  ],
+  "wy": [
+   "moved",
+   "center"
+  ],
+  "moved": [
+   "set",
+   "per_letter"
+  ],
+  "copies": [
+   "one",
+   "separate"
+  ],
+  "survival": [
+   "own_sign",
+   "ignore_sign"
+  ],
+  "comm": [
+   "diff",
+   "sum",
+   "both",
+   "none"
+  ],
+  "comm_reads": [
+   "carry",
+   "none"
+  ],
+  "recset": [
+   "all",
+   "drop_fixed",
+   "drop_even"
+  ],
+  "weight": [
+   "sqrt",
+   "born",
+   "none"
+  ],
+  "exch": [
+   2,
+   1
+  ]
+ },
+ "denominator_groups": {
+  "unread": [
+   "traceless",
+   "full"
+  ],
+  "norm": [
+   "N",
+   "records"
+  ]
+ },
+ "configurations": [
+  [
+   3,
+   2,
+   []
+  ],
+  [
+   3,
+   2,
+   [
+    2
+   ]
+  ],
+  [
+   3,
+   2,
+   [
+    3
+   ]
+  ],
+  [
+   3,
+   2,
+   [
+    2,
+    2
+   ]
+  ],
+  [
+   3,
+   2,
+   [
+    2,
+    3
+   ]
+  ],
+  [
+   3,
+   2,
+   [
+    3,
+    3
+   ]
+  ],
+  [
+   2,
+   2,
+   []
+  ],
+  [
+   2,
+   2,
+   [
+    2
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    3
+   ]
+  ]
+ ]
+}

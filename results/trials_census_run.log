@@ -1,0 +1,162 @@
+validating the engine against Lean ...
+  Lean cases checked: 185 (20 single, 165 pairs), agree 185; skipped pairs (alternatives of one clause): 6
+  Letter tables: 12/12 agree
+running the census ...
+{
+ "definition_combinations": 1492992,
+ "distinct_raw_readouts": 12574,
+ "distinct_values": 9275,
+ "base_multiplicity": 2,
+ "within_relative": {
+  "1%": 38,
+  "0.1%": 5,
+  "1e-4": 2,
+  "1e-6": 1,
+  "1e-8": 1
+ },
+ "within_1sigma_codata": [
+  {
+   "inverse": 137.03599918956616,
+   "readout": [
+    {
+     "1": 79,
+     "2": 48,
+     "3": 42,
+     "6": 3
+    },
+    31104
+   ],
+   "combinations": 2
+  }
+ ],
+ "distinct_values_with_inverse_in_130_145": 200,
+ "density_per_unit_inverse_near_137": 13.333333333333334,
+ "expected_chance_1sigma_hits_in_this_space": 5.6e-07,
+ "search_size_factor_for_even_odds": 1232142.857142857,
+ "nearest_other_values": [
+  {
+   "inverse": 137.044386,
+   "readout": [
+    {
+     "1": 82,
+     "36": 42,
+     "81": 48
+    },
+    104976
+   ],
+   "combinations": 6
+  },
+  {
+   "inverse": 137.055891,
+   "readout": [
+    {
+     "1": 63,
+     "2": 3
+    },
+    9216
+   ],
+   "combinations": 432
+  },
+  {
+   "inverse": 137.06247,
+   "readout": [
+    {
+     "1": 82,
+     "2": 48,
+     "3": 36,
+     "6": 6
+    },
+    31104
+   ],
+   "combinations": 6
+  },
+  {
+   "inverse": 137.099922,
+   "readout": [
+    {
+     "1": 82,
+     "2": 51,
+     "3": 42
+    },
+    31104
+   ],
+   "combinations": 6
+  },
+  {
+   "inverse": 137.184254,
+   "readout": [
+    {
+     "1": 79,
+     "2": 42,
+     "3": 51
+    },
+    31104
+   ],
+   "combinations": 30
+  },
+  {
+   "inverse": 136.879672,
+   "readout": [
+    {
+     "1": 79,
+     "2": 48,
+     "3": 36,
+     "4": 9
+    },
+    31104
+   ],
+   "combinations": 2
+  },
+  {
+   "inverse": 137.223529,
+   "readout": [
+    {
+     "1": 79,
+     "4": 36,
+     "9": 51,
+     "36": 6
+    },
+    46656
+   ],
+   "combinations": 18
+  },
+  {
+   "inverse": 136.800535,
+   "readout": [
+    {
+     "1": 79,
+     "2": 54,
+     "4": 36
+    },
+    31104
+   ],
+   "combinations": 64
+  },
+  {
+   "inverse": 137.324503,
+   "readout": [
+    {
+     "1": 79,
+     "9": 31,
+     "81": 48
+    },
+    82944
+   ],
+   "combinations": 52
+  },
+  {
+   "inverse": 137.34293,
+   "readout": [
+    {
+     "1": 79,
+     "2": 6,
+     "3": 76,
+     "6": 3
+    },
+    31104
+   ],
+   "combinations": 2
+  }
+ ]
+}
+exit=0

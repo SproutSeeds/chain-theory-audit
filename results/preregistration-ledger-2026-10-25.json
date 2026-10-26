@@ -1,0 +1,413 @@
+{
+ "ledger": "Chain Theory pre-registration ledger",
+ "prepared": "2026-10-25",
+ "purpose": "Fix the theory's numbers before new measurements or new identifications, so that later agreement can be told apart from post-hoc fitting.",
+ "labels": "ORP: the alpha closed form and the arithmetic are Verified; every identification with a physical constant is a Conjecture of its source or our Heuristic inference, as marked.",
+ "A_alpha": {
+  "closed_form": "(79 + 48*sqrt(2) + 42*sqrt(3) + 3*sqrt(6)) / 31104",
+  "alpha": "0.00729735256366226025479763558800893201385159185699908385661402",
+  "inverse_alpha": "137.035999189566155029183744020866799566408684673854265541249",
+  "status_in_source": "Conjecture 1 (Photon) of the Letter: the identification with alpha(0) is conjectured; the number is a Lean-checked consequence of stated definitions",
+  "current_determinations": [
+   {
+    "determination": "CODATA 2022 recommended (input uncertainties expanded x2.5)",
+    "inverse_alpha": "137.035999177",
+    "sigma": "0.000000021",
+    "source": "Mohr et al., RMP 97, 025002 (2025); expansion factor 2.5 on items D1-D6 (checked in the text)",
+    "candidate_minus_value_in_sigma": 0.5983883347230354
+   },
+   {
+    "determination": "Weighted mean of the three inputs, unexpanded (chi2 = 31 on 2 dof)",
+    "inverse_alpha": "137.0359991778",
+    "sigma": "0.0000000084",
+    "source": "computed here from the three rows below",
+    "candidate_minus_value_in_sigma": 1.4007327415694932
+   },
+   {
+    "determination": "Electron g-2 with the SM prediction (Northwestern 2023)",
+    "inverse_alpha": "137.035999166",
+    "sigma": "0.000000015",
+    "source": "Fan et al., PRL 130, 071801 (2023), as quoted in the Letter, Fig. 3",
+    "candidate_minus_value_in_sigma": 1.5710770019455829
+   },
+   {
+    "determination": "Rubidium recoil (LKB Paris 2020)",
+    "inverse_alpha": "137.035999206",
+    "sigma": "0.000000011",
+    "source": "Morel et al., Nature 588, 61 (2020)",
+    "candidate_minus_value_in_sigma": -1.4939859064378413
+   },
+   {
+    "determination": "Cesium recoil (Berkeley 2018)",
+    "inverse_alpha": "137.035999046",
+    "sigma": "0.000000027",
+    "source": "Parker et al., Science 360, 191 (2018)",
+    "candidate_minus_value_in_sigma": 5.317265001080879
+   }
+  ],
+  "decision_rule": {
+   "statement": "For a future determination v +/- s of 1/alpha(0) with its own quoted standard uncertainty (no expansion factor): |c - v| <= 2s consistent; 2s < |c - v| <= 3s tension; |c - v| > 3s excluded by that determination. For a CODATA adjustment, report both the expanded and the unexpanded comparison.",
+   "decisive_case": "A new cesium-type result agreeing with Berkeley 2018 would exclude the candidate at about 5 sigma; agreement of new g-2 and rubidium results near the candidate would support it at the next digit.",
+   "awaited": [
+    "next-generation electron g-2 (Northwestern)",
+    "rubidium recoil (LKB Paris)",
+    "cesium recoil (Berkeley)",
+    "CODATA 2026 adjustment"
+   ]
+  }
+ },
+ "B_same_arithmetic_elsewhere": {
+  "label": "Heuristic: our evaluation of the Letter's arithmetic outside its stated scope. NOT claims of the author. Registered to make any later identification checkable for post-hoc fitting.",
+  "rows": [
+   {
+    "configuration": "the Letter's object: qutrit center, two (3,2) reads, one (3,2) unread",
+    "center_dim": 3,
+    "read_far_dim": 2,
+    "unread_far_dims": [
+     2
+    ],
+    "readout": {
+     "numerator": {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     "denominator": 31104
+    },
+    "value": "0.007297352563662260254797636",
+    "inverse": "137.0359991895661550291837",
+    "note": "the alpha candidate, for reference"
+   },
+   {
+    "configuration": "qutrit center, two (3,2) reads, no unread link",
+    "center_dim": 3,
+    "read_far_dim": 2,
+    "unread_far_dims": [],
+    "readout": {
+     "numerator": {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     "denominator": 1296
+    },
+    "value": "0.1751364615278942461151433",
+    "inverse": "5.709833299565256459549323",
+    "note": ""
+   },
+   {
+    "configuration": "qutrit center, two (3,2) reads, one (3,3) unread",
+    "center_dim": 3,
+    "read_far_dim": 2,
+    "unread_far_dims": [
+     3
+    ],
+    "readout": {
+     "numerator": {
+      "1": 79,
+      "2": 48,
+      "3": 42,
+      "6": 3
+     },
+     "denominator": 82944
+    },
+    "value": "0.002736507211373347595549113",
+    "inverse": "365.4293311721764134111567",
+    "note": ""
+   },
+   {
+    "configuration": "qubit center, two (2,2) reads, no unread link (Letter Table S5)",
+    "center_dim": 2,
+    "read_far_dim": 2,
+    "unread_far_dims": [],
+    "readout": {
+     "numerator": {
+      "1": 24,
+      "2": 30,
+      "4": 3
+     },
+     "denominator": 256
+    },
+    "value": "0.2829156518405970760314479",
+    "inverse": "3.53462239891707774977441",
+    "note": ""
+   },
+   {
+    "configuration": "qubit center, two (2,2) reads, one (2,2) unread",
+    "center_dim": 2,
+    "read_far_dim": 2,
+    "unread_far_dims": [
+     2
+    ],
+    "readout": {
+     "numerator": {
+      "1": 24,
+      "2": 30,
+      "4": 3
+     },
+     "denominator": 2304
+    },
+    "value": "0.03143507242673300844793866",
+    "inverse": "31.81160159025369974796969",
+    "note": ""
+   },
+   {
+    "configuration": "(3,3) link, two reads and one unread of its type",
+    "center_dim": 3,
+    "read_far_dim": 3,
+    "unread_far_dims": [
+     3
+    ],
+    "readout": {
+     "numerator": {
+      "1": 184,
+      "3": 200
+     },
+     "denominator": 419904
+    },
+    "value": "0.001263170061523051599188122",
+    "inverse": "791.6590413758401074046917",
+    "note": "a dark genre; not readable in the Letter"
+   },
+   {
+    "configuration": "(4,2) link, two reads and one unread of its type",
+    "center_dim": 4,
+    "read_far_dim": 2,
+    "unread_far_dims": [
+     2
+    ],
+    "readout": {
+     "numerator": {
+      "1": 198,
+      "2": 90,
+      "4": 126,
+      "8": 3
+     },
+     "denominator": 184320
+    },
+    "value": "0.003177975813735987004584213",
+    "inverse": "314.6657050307796443600614",
+    "note": "a dark genre; not readable in the Letter"
+   },
+   {
+    "configuration": "(4,3) link, two reads and one unread of its type",
+    "center_dim": 4,
+    "read_far_dim": 3,
+    "unread_far_dims": [
+     3
+    ],
+    "readout": {
+     "numerator": {
+      "1": 373,
+      "3": 240,
+      "4": 156
+     },
+     "denominator": 2488320
+    },
+    "value": "0.0004423435063884591010989692",
+    "inverse": "2260.686515248210173611363",
+    "note": "a dark genre; not readable in the Letter"
+   },
+   {
+    "configuration": "(4,4) link, two reads and one unread of its type",
+    "center_dim": 4,
+    "read_far_dim": 4,
+    "unread_far_dims": [
+     4
+    ],
+    "readout": {
+     "numerator": {
+      "1": 660,
+      "4": 690
+     },
+     "denominator": 14745600
+    },
+    "value": "0.0001383463541666666666666667",
+    "inverse": "7228.235294117647058823529",
+    "note": "a dark genre; not readable in the Letter"
+   }
+  ]
+ },
+ "C_compendium_cells": {
+  "source": "Chain Theory compendium, Release 0.1, working draft dated 23 Oct 2026 (https://alexwg.org/publications/ChainTheoryCompendium.pdf); pages are printed page numbers",
+  "cells": [
+   {
+    "quantity": "first powers of the bodies (three rule sets, printed side by side)",
+    "pages": "77, 79, 95",
+    "printed": {
+     "p. 77, eq. (29), one reading": {
+      "e": 67,
+      "mu": 69,
+      "tau": 432,
+      "p": 2709,
+      "n": 8127
+     },
+     "p. 79, eq. (31), first power at the stop clause": {
+      "e": 67,
+      "mu": 621,
+      "tau": 432,
+      "p": 8613
+     },
+     "p. 79, eq. (31) and p. 95, eq. (45), derived cells": {
+      "e": 67,
+      "mu": 963,
+      "tau": 3969,
+      "p": 2871
+     }
+    },
+    "compendium_says": "\"the passed records at the leptons and the passed leg at the proton are objects of two rules\" (p. 78); \"The proton in the electron unit stands outside the comparison by orders at every reading the construction has produced\" (p. 419)"
+   },
+   {
+    "quantity": "mass ratios (OUR inference: the compendium does not print these ratios)",
+    "pages": "122 (basis)",
+    "basis": "\"the standing mass office is its Born square\" (p. 122), read as m_x/m_e = (p_x/p_e)^2",
+    "rows": [
+     {
+      "source_cell": "p. 77, eq. (29), one reading",
+      "ratio": "m_mu/m_e",
+      "inferred_value": "4761/4489",
+      "decimal": "1.06059255959",
+      "measured_CODATA_2022": "206.7682827(0.0000046)",
+      "relative_difference": -0.9948706225841759
+     },
+     {
+      "source_cell": "p. 77, eq. (29), one reading",
+      "ratio": "m_tau/m_e",
+      "inferred_value": "186624/4489",
+      "decimal": "41.5736244152",
+      "measured_CODATA_2022": "3477.23(0.23)",
+      "relative_difference": -0.9880440395328358
+     },
+     {
+      "source_cell": "p. 77, eq. (29), one reading",
+      "ratio": "m_p/m_e",
+      "inferred_value": "7338681/4489",
+      "decimal": "1634.81421252",
+      "measured_CODATA_2022": "1836.152673426(0.000000032)",
+      "relative_difference": -0.10965235289004532
+     },
+     {
+      "source_cell": "p. 79, eq. (31), first power at the stop clause",
+      "ratio": "m_mu/m_e",
+      "inferred_value": "385641/4489",
+      "decimal": "85.9079973268",
+      "measured_CODATA_2022": "206.7682827(0.0000046)",
+      "relative_difference": -0.5845204293182494
+     },
+     {
+      "source_cell": "p. 79, eq. (31), first power at the stop clause",
+      "ratio": "m_tau/m_e",
+      "inferred_value": "186624/4489",
+      "decimal": "41.5736244152",
+      "measured_CODATA_2022": "3477.23(0.23)",
+      "relative_difference": -0.9880440395328358
+     },
+     {
+      "source_cell": "p. 79, eq. (31), first power at the stop clause",
+      "ratio": "m_p/m_e",
+      "inferred_value": "74183769/4489",
+      "decimal": "16525.678102",
+      "measured_CODATA_2022": "1836.152673426(0.000000032)",
+      "relative_difference": 8.000165586009038
+     },
+     {
+      "source_cell": "p. 79, eq. (31) and p. 95, eq. (45), derived cells",
+      "ratio": "m_mu/m_e",
+      "inferred_value": "927369/4489",
+      "decimal": "206.586990421",
+      "measured_CODATA_2022": "206.7682827(0.0000046)",
+      "relative_difference": -0.0008767895955969922
+     },
+     {
+      "source_cell": "p. 79, eq. (31) and p. 95, eq. (45), derived cells",
+      "ratio": "m_tau/m_e",
+      "inferred_value": "15752961/4489",
+      "decimal": "3509.23613277",
+      "measured_CODATA_2022": "3477.23(0.23)",
+      "relative_difference": 0.009204491152150093
+     },
+     {
+      "source_cell": "p. 79, eq. (31) and p. 95, eq. (45), derived cells",
+      "ratio": "m_p/m_e",
+      "inferred_value": "8242641/4489",
+      "decimal": "1836.18645578",
+      "measured_CODATA_2022": "1836.152673426(0.000000032)",
+      "relative_difference": 1.839844544869569e-05
+     }
+    ]
+   },
+   {
+    "quantity": "Koide relation, two spellings",
+    "pages": "362-363, eq. (219)",
+    "printed": {
+     "K1_dock": "16684819/24990001",
+     "K1_dock_minus_2/3": "74455/74970003",
+     "K1_hub": "1857859/2927521",
+     "K1_hub_minus_2/3": "-281465/8782563"
+    },
+    "decimal": {
+     "K1_dock": "0.667659797212",
+     "K1_hub": "0.634618504872"
+    },
+    "measured_from_CODATA_2022_masses": "0.6666605115",
+    "compendium_says": "\"equals two thirds in the field at no reading\" (Open result 157.1)"
+   },
+   {
+    "quantity": "weak mixing angle",
+    "pages": "386, Theorem 164.5 (conditional)",
+    "printed": {
+     "cos2_theta_W": "784/1568 = 1/2"
+    }
+   },
+   {
+    "quantity": "cosmological term",
+    "pages": "282, eq. (158), Theorem 115.1 (conditional)",
+    "printed": {
+     "Lambda": "36^-63"
+    },
+    "decimal": "8.97309884137e-99",
+    "compendium_says": "\"compared with nothing here\"; no unit is fixed"
+   },
+   {
+    "quantity": "coupling at the cap and through the joined web",
+    "pages": "343, eqs. (198)-(199)",
+    "printed": {
+     "alpha_cap(k)": "(79 + 48 sqrt2 + 42 sqrt3 + 3 sqrt6) / 319^k",
+     "alpha_cap(k+1)/alpha_cap(k)": "1/319",
+     "alpha_joined": "42^2 = 1764"
+    }
+   },
+   {
+    "quantity": "Higgs mass displays",
+    "pages": "492",
+    "printed": {
+     "faces": [
+      "16/67",
+      "12/67"
+     ]
+    },
+    "compendium_says": "no GeV scale is fixed"
+   },
+   {
+    "quantity": "quark mixing",
+    "pages": "391",
+    "printed": {
+     "largest_Jarlskog_square": "1/108"
+    },
+    "decimal": {
+     "largest_|J|": "0.0962250448649"
+    }
+   },
+   {
+    "quantity": "number of generations",
+    "pages": "209-211, Theorem 83.1",
+    "printed": {
+     "rungs_at_termination": 3
+    },
+    "compendium_says": "at the adopted reading; other readings print other counts (Open result 67.1: two)"
+   }
+  ]
+ }
+}

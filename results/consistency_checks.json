@@ -1,0 +1,103 @@
+{
+ "stabilizer": {
+  "action_rank": 8,
+  "stabilizer_dimension": 4,
+  "U_coefficients_e3_e10_e11_e12": [
+   "0",
+   "-1/3",
+   "-2/3",
+   "1/3"
+  ],
+  "U_annihilates_pair_ket": true,
+  "letter_says": "rank 8, dimension 4, center the line of U = i diag(1,1;-1,-1,0) (Theorem S3)"
+ },
+ "unbroken_generator": {
+  "U = a*(6Y) + t*T3 + b*diag(0,0;1,1,-2)": {
+   "a": "1/3",
+   "t": "0",
+   "b": "-1/3"
+  },
+  "exact": true,
+  "reading": "U has no weak-isospin component and a nonzero color component; electric charge Q_em = T3 + Y has a weak-isospin component and no color component, so U is not Q_em in any normalization."
+ },
+ "ray_symmetries": {
+  "ray_stabilizer_dimension": 5,
+  "intersection_with_weak_su2": 0,
+  "intersection_with_color_su3": 1,
+  "reading": "an electric charge n.T + Y leaves the ray invariant only if n.T does (Y = Q/6 acts as a scalar); the intersection with weak su(2) is zero, so no electric-charge direction does"
+ },
+ "electric_charge": {
+  "ray_invariant_for_some_isospin_direction": false,
+  "proof": "the qubit-block generator n.sigma/2 + 1/2 must act as a scalar on the 2-dim support; its traceless part n.sigma/2 is nonzero for every unit n",
+  "electric_charges_of_the_two_terms_for_n_along_T3": {
+   "|qubit 0, qutrit 0>": "2/3",
+   "|qubit 1, qutrit 1>": "-1/3"
+  },
+  "letter_assignment": "Letter Sec. S3: the link C^2 (x) C^3 carries (3, 2) with Y = 1/6, \"the quantum numbers of the left-handed quark doublet\""
+ },
+ "weak_angle": {
+  "cos2_theta_W": "1/2 (compendium Theorem 164.5, p. 386)",
+  "relation": "alpha_em = alpha_Y cos^2(theta_W)",
+  "rows": [
+   {
+    "reading": "per unit of Y (Q_em = T3 + Y)",
+    "implied_inverse_alpha_em": 274.0719983791323
+   },
+   {
+    "reading": "per unit of 2Y (Q_em = T3 + Y/2 convention)",
+    "implied_inverse_alpha_em": 68.51799959478308
+   },
+   {
+    "reading": "per unit of Q = 6Y (the Letter's central generator)",
+    "implied_inverse_alpha_em": 7.613111066087009
+   },
+   {
+    "reading": "GUT-normalized U(1)_1, alpha_1 = (5/3) alpha_Y",
+    "implied_inverse_alpha_em": 456.7866639652205
+   }
+  ],
+  "needed_for_photon_conjecture": "alpha_Y = 2 alpha_cand, i.e. a charge scale sqrt(2) that no standard normalization of hypercharge supplies"
+ },
+ "running_ladder": {
+  "compendium": "alpha_cap(k) = (79 + 48 sqrt2 + 42 sqrt3 + 3 sqrt6) / 319^k, ratio 1/319 per rung (p. 343)",
+  "ladder": [
+   {
+    "k": 0,
+    "inverse_alpha_cap": 0.004405735570652204
+   },
+   {
+    "k": 1,
+    "inverse_alpha_cap": 1.4054296470380532
+   },
+   {
+    "k": 2,
+    "inverse_alpha_cap": 448.3320574051389
+   },
+   {
+    "k": 3,
+    "inverse_alpha_cap": 143017.92631223932
+   }
+  ],
+  "letter_value_inverse": 137.03599918956616,
+  "31104_is_a_power_of_319": false,
+  "per_rung_factor_vs_QED": "QED running from q = 0 to the Z mass changes 1/alpha by about 7% (137.036 to about 128.9); the ladder changes it by a factor 319 per rung"
+ },
+ "quoted_facts": [
+  {
+   "fact": "The Ward identity used for Z1 = Z2 holds for the unit functional W = (1,1,1) and fails for Q and U",
+   "source": "Letter Theorem S4; compendium p. 317"
+  },
+  {
+   "fact": "Weighted by the unbroken generator U, the 172 records sum to zero over the register",
+   "source": "compendium Open result 131.1, pp. 314-316"
+  },
+  {
+   "fact": "Two objects carry the photon name: the (2,3) open link (Theorem 134.1, p. 319) and the (2,2) pair ket at the join (chapter 151, p. 349)",
+   "source": "compendium"
+  },
+  {
+   "fact": "The same numerator appears over 319 ('root read' at the cap, p. 84; alpha_cap, p. 343) and over 31104 (the Letter)",
+   "source": "compendium pp. 84, 343; Letter Eq. (6)"
+  }
+ ]
+}

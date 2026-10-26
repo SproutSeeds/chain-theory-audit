@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+lean/.lake/
+lean/lake-manifest.json
+chain-theory/

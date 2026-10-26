@@ -1,0 +1,3569 @@
+{
+ "summary": {
+  "random_mirrored_total": 60,
+  "random_mirrored_rp": 60,
+  "random_controls_total": 59,
+  "random_controls_rp": 9,
+  "random_controls_violations_by_kind": {
+   "unmirrored_local": [
+    20,
+    20
+   ],
+   "one_sided_distill": [
+    10,
+    19
+   ],
+   "one_sided_local": [
+    20,
+    20
+   ]
+  },
+  "expectation_mismatches": []
+ },
+ "single_links": [
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 4,
+   "certificate": "LDL^T with 8 positive pivots, remainder exactly zero",
+   "case": "pair straight across, (2,2) spacetime, readable",
+   "mirror": [
+    "a<->b"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link a(2)-b(2)"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "pair straight across, (3,3) strong, dark",
+   "mirror": [
+    "a<->b"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link a(3)-b(3)"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 16,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 16,
+   "certificate": "LDL^T with 32 positive pivots, remainder exactly zero",
+   "case": "pair straight across, (4,4) Higgs, dark",
+   "mirror": [
+    "a<->b"
+   ],
+   "left_dim": 4,
+   "construction": [
+    "link a(4)-b(4)"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  }
+ ],
+ "alpha_object": [
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "alpha object before the join, mirror = exchange of read links",
+   "mirror": [
+    "Q1<->Q2",
+    "q1<->q2"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link Q1(3)-q1(2)",
+    "link Q2(3)-q2(2)",
+    "link Q3(3)-f(2)"
+   ],
+   "expected_rp": true,
+   "note": "the unread link Q3-f is a spectator",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 36,
+   "certificate": "LDL^T with 72 positive pivots, remainder exactly zero",
+   "case": "alpha object after the join (Q1,Q2 distilled; straddles the mirror)",
+   "mirror": [
+    "Q1<->Q2",
+    "q1<->q2"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link Q1(3)-q1(2)",
+    "link Q2(3)-q2(2)",
+    "link Q3(3)-f(2)",
+    "distill Q1,Q2"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "1+1i",
+   "witness_support": [
+    [
+     3,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "case": "control: join of Q1 with the unread copy Q3 (not mirror-symmetric)",
+   "mirror": [
+    "Q1<->Q2",
+    "q1<->q2"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link Q1(3)-q1(2)",
+    "link Q2(3)-q2(2)",
+    "link Q3(3)-f(2)",
+    "distill Q1,Q3"
+   ],
+   "expected_rp": null,
+   "note": "breaks the mirror; positivity not predicted either way",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "0-2i",
+   "witness_support": [
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control: alpha object after the join, a matching at q1 only",
+   "mirror": [
+    "Q1<->Q2",
+    "q1<->q2"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link Q1(3)-q1(2)",
+    "link Q2(3)-q2(2)",
+    "link Q3(3)-f(2)",
+    "distill Q1,Q2",
+    "local at q1"
+   ],
+   "expected_rp": null,
+   "note": "diag(1,i) at q1 without its conjugate at q2",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 36,
+   "certificate": "LDL^T with 72 positive pivots, remainder exactly zero",
+   "case": "alpha object after the join, mirrored matching (diag(1,i) at q1, conjugate at q2)",
+   "mirror": [
+    "Q1<->Q2",
+    "q1<->q2"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link Q1(3)-q1(2)",
+    "link Q2(3)-q2(2)",
+    "link Q3(3)-f(2)",
+    "distill Q1,Q2",
+    "local at q1",
+    "local at q2"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  }
+ ],
+ "failures": [
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": false,
+   "os_hilbert_dim": 4,
+   "witness_form": "-2",
+   "witness_support": 2,
+   "case": "singlet: qubit pair twisted by i sigma_y",
+   "mirror": [
+    "a<->b"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link a(2)-b(2)",
+    "twist at b"
+   ],
+   "expected_rp": false,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 16,
+   "hermitian": true,
+   "rp": false,
+   "os_hilbert_dim": 16,
+   "witness_form": "-2",
+   "witness_support": 2,
+   "case": "crossed pairs: La-Rb and Lb-Ra",
+   "mirror": [
+    "La<->Ra",
+    "Lb<->Rb"
+   ],
+   "left_dim": 4,
+   "construction": [
+    "link La(2)-Rb(2)",
+    "link Lb(2)-Ra(2)"
+   ],
+   "expected_rp": false,
+   "note": "mirror-symmetric as a set of links; coefficient matrix is the swap",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": false,
+   "os_hilbert_dim": 4,
+   "witness_form": "-1",
+   "witness_support": 1,
+   "case": "matching U (x) U instead of U (x) conj(U) on a straight pair",
+   "mirror": [
+    "a<->b"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link a(2)-b(2)",
+    "local at a",
+    "local at b"
+   ],
+   "expected_rp": false,
+   "note": "U = diag(1,i): coefficient U U^T = diag(1,-1)",
+   "matches_expectation": true
+  }
+ ],
+ "washed_links": [
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": false,
+   "os_hilbert_dim": 4,
+   "witness_form": "-1/60",
+   "witness_support": 1,
+   "case": "washed pair d=2, F=9/40 (just below 1/d^2)",
+   "left_dim": 2,
+   "expected_rp": false,
+   "note": "predicted: reflection positive iff F >= 1/d^2",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "washed pair d=2, F=1/4 (at 1/d^2)",
+   "left_dim": 2,
+   "expected_rp": true,
+   "note": "predicted: reflection positive iff F >= 1/d^2",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 4,
+   "certificate": "LDL^T with 8 positive pivots, remainder exactly zero",
+   "case": "washed pair d=2, F=1/2 (at 1/d (separability edge))",
+   "left_dim": 2,
+   "expected_rp": true,
+   "note": "predicted: reflection positive iff F >= 1/d^2",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 4,
+   "certificate": "LDL^T with 8 positive pivots, remainder exactly zero",
+   "case": "washed pair d=2, F=1 (pure pair)",
+   "left_dim": 2,
+   "expected_rp": true,
+   "note": "predicted: reflection positive iff F >= 1/d^2",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": false,
+   "os_hilbert_dim": 9,
+   "witness_form": "-1/240",
+   "witness_support": 1,
+   "case": "washed pair d=3, F=1/10 (just below 1/d^2)",
+   "left_dim": 3,
+   "expected_rp": false,
+   "note": "predicted: reflection positive iff F >= 1/d^2",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "washed pair d=3, F=1/9 (at 1/d^2)",
+   "left_dim": 3,
+   "expected_rp": true,
+   "note": "predicted: reflection positive iff F >= 1/d^2",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "washed pair d=3, F=1/3 (at 1/d (separability edge))",
+   "left_dim": 3,
+   "expected_rp": true,
+   "note": "predicted: reflection positive iff F >= 1/d^2",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "washed pair d=3, F=1 (pure pair)",
+   "left_dim": 3,
+   "expected_rp": true,
+   "note": "predicted: reflection positive iff F >= 1/d^2",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 16,
+   "hermitian": true,
+   "rp": false,
+   "os_hilbert_dim": 16,
+   "witness_form": "-1/600",
+   "witness_support": 1,
+   "case": "washed pair d=4, F=9/160 (just below 1/d^2)",
+   "left_dim": 4,
+   "expected_rp": false,
+   "note": "predicted: reflection positive iff F >= 1/d^2",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 16,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "washed pair d=4, F=1/16 (at 1/d^2)",
+   "left_dim": 4,
+   "expected_rp": true,
+   "note": "predicted: reflection positive iff F >= 1/d^2",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 16,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 16,
+   "certificate": "LDL^T with 32 positive pivots, remainder exactly zero",
+   "case": "washed pair d=4, F=1/4 (at 1/d (separability edge))",
+   "left_dim": 4,
+   "expected_rp": true,
+   "note": "predicted: reflection positive iff F >= 1/d^2",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 16,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 16,
+   "certificate": "LDL^T with 32 positive pivots, remainder exactly zero",
+   "case": "washed pair d=4, F=1 (pure pair)",
+   "left_dim": 4,
+   "expected_rp": true,
+   "note": "predicted: reflection positive iff F >= 1/d^2",
+   "matches_expectation": true
+  }
+ ],
+ "random_mirrored": [
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 36,
+   "certificate": "LDL^T with 72 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 0",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(2)-SL1(3)",
+    "link R1(2)-SR1(3)",
+    "distill L1,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 4,
+   "certificate": "LDL^T with 8 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 1",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "distill L0,R0",
+    "distill L0,R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 16,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 2",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 4,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "link L1(2)-R1(2)",
+    "local at L1",
+    "local at R1",
+    "distill L0,L1",
+    "distill R0,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 4,
+   "certificate": "LDL^T with 8 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 3",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "local at L0",
+    "local at R0",
+    "distill L0,R0",
+    "distill L0,R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 16,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 4,
+   "certificate": "LDL^T with 8 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 4",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 4,
+   "construction": [
+    "link L0(2)-SL0(2)",
+    "link R0(2)-SR0(2)",
+    "link L1(2)-R1(2)",
+    "local at L1",
+    "local at R1",
+    "local at L0",
+    "local at R0",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 5",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-R0(3)"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 4,
+   "certificate": "LDL^T with 8 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 6",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "distill L0,R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 16,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 7",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 4,
+   "construction": [
+    "link L0(2)-SL0(2)",
+    "link R0(2)-SR0(2)",
+    "link L1(2)-R1(2)",
+    "distill L0,L1",
+    "distill R0,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 8",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 9",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 16,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 10",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 4,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "link L1(2)-SL1(2)",
+    "link R1(2)-SR1(2)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 4,
+   "certificate": "LDL^T with 8 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 11",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "distill L0,R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 81,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 81,
+   "certificate": "LDL^T with 162 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 12",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(3)-R1(3)",
+    "distill L1,R1",
+    "distill L1,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 4,
+   "certificate": "LDL^T with 8 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 13",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "distill L0,R0",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 16,
+   "certificate": "LDL^T with 32 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 14",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "link L1(3)-R1(3)",
+    "local at L1",
+    "local at R1",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L0,R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 15",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 16",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-SL0(3)",
+    "link R0(3)-SR0(3)",
+    "link L1(2)-SL1(2)",
+    "link R1(2)-SR1(2)",
+    "local at L1",
+    "local at R1",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 17",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(2)-R1(2)",
+    "distill L1,R1",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L0,L1",
+    "distill R0,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 81,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 18",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-SL0(3)",
+    "link R0(3)-SR0(3)",
+    "link L1(3)-R1(3)",
+    "local at L1",
+    "local at R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 19",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "local at L0",
+    "local at R0",
+    "distill L0,R0",
+    "distill L0,R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 81,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 20",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(3)-R1(3)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 4,
+   "certificate": "LDL^T with 8 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 21",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "distill L0,R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 4,
+   "certificate": "LDL^T with 8 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 22",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "distill L0,R0",
+    "distill L0,R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 4,
+   "certificate": "LDL^T with 8 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 23",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "distill L0,R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 24",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-SL0(2)",
+    "link R0(2)-SR0(2)",
+    "link L1(3)-R1(3)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 16,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 4,
+   "certificate": "LDL^T with 8 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 25",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 4,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "link L1(2)-SL1(3)",
+    "link R1(2)-SR1(3)",
+    "local at L1",
+    "local at R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 26",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "link L1(2)-R1(2)",
+    "local at L1",
+    "local at R1",
+    "distill L0,L1",
+    "distill R0,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 27",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "link L1(2)-R1(2)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L0,L1",
+    "distill R0,R1",
+    "local at L1",
+    "local at R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 4,
+   "certificate": "LDL^T with 8 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 28",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "local at L0",
+    "local at R0",
+    "distill L0,R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 29",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "distill L0,R0",
+    "distill L0,R0",
+    "distill L0,R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 30",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-SL0(2)",
+    "link R0(2)-SR0(2)",
+    "link L1(3)-R1(3)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "local at L1",
+    "local at R1",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 31",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(2)-SL1(3)",
+    "link R1(2)-SR1(3)",
+    "local at L1",
+    "local at R1",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L0,L1",
+    "distill R0,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 36,
+   "certificate": "LDL^T with 72 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 32",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(2)-SL1(3)",
+    "link R1(2)-SR1(3)",
+    "distill L1,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 33",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "distill L0,R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 34",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 81,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 35",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(3)-R1(3)",
+    "local at L0",
+    "local at R0",
+    "distill L0,L1",
+    "distill R0,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 36,
+   "certificate": "LDL^T with 72 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 36",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(2)-SL1(3)",
+    "link R1(2)-SR1(3)",
+    "distill L0,R0",
+    "distill L1,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 4,
+   "certificate": "LDL^T with 8 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 37",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "link L1(2)-R1(2)",
+    "distill L1,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 16,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 38",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 4,
+   "construction": [
+    "link L0(2)-SL0(2)",
+    "link R0(2)-SR0(2)",
+    "link L1(2)-SL1(2)",
+    "link R1(2)-SR1(2)",
+    "local at L0",
+    "local at R0",
+    "distill L0,R0",
+    "distill L0,L1",
+    "distill R0,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 36,
+   "certificate": "LDL^T with 72 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 39",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(2)-R1(2)",
+    "distill L0,R0",
+    "distill L1,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 40",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "local at L0",
+    "local at R0",
+    "distill L0,R0",
+    "distill L0,R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 81,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 81,
+   "certificate": "LDL^T with 162 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 41",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(3)-R1(3)",
+    "local at L0",
+    "local at R0",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L1,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 42",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-SL0(3)",
+    "link R0(2)-SR0(3)",
+    "link L1(3)-R1(3)",
+    "local at L0",
+    "local at R0",
+    "distill L1,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 81,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 81,
+   "certificate": "LDL^T with 162 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 43",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(3)-R1(3)",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 36,
+   "certificate": "LDL^T with 72 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 44",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "link L1(3)-R1(3)",
+    "distill L0,R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 45",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 46",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-SL0(3)",
+    "link R0(3)-SR0(3)",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 16,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 16,
+   "certificate": "LDL^T with 32 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 47",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 4,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "link L1(2)-SL1(3)",
+    "link R1(2)-SR1(3)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L1,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 48",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-SL0(2)",
+    "link R0(2)-SR0(2)",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 49",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 50",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 51",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-SL0(2)",
+    "link R0(2)-SR0(2)",
+    "link L1(3)-R1(3)",
+    "distill L1,R1",
+    "distill L0,L1",
+    "distill R0,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 81,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 52",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(3)-R1(3)",
+    "distill L0,L1",
+    "distill R0,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 81,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 53",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(3)-SL1(2)",
+    "link R1(3)-SR1(2)",
+    "distill L1,R1",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L0,L1",
+    "distill R0,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 16,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 16,
+   "certificate": "LDL^T with 32 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 54",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 4,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "link L1(2)-SL1(2)",
+    "link R1(2)-SR1(2)",
+    "distill L1,R1",
+    "local at L0",
+    "local at R0",
+    "distill L1,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 55",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "distill L0,R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 36,
+   "certificate": "LDL^T with 72 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 56",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "link L1(2)-SL1(3)",
+    "link R1(2)-SR1(3)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L0,R0",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 9,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 9,
+   "certificate": "LDL^T with 18 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 57",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "distill L0,R0",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 4,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 58",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-SL0(2)",
+    "link R0(2)-SR0(2)"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  },
+  {
+   "gram_size": 81,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 81,
+   "certificate": "LDL^T with 162 positive pivots, remainder exactly zero",
+   "case": "random mirrored web 59",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(3)-R1(3)",
+    "distill L1,R1",
+    "distill L1,R1"
+   ],
+   "expected_rp": true,
+   "note": "",
+   "matches_expectation": true
+  }
+ ],
+ "random_controls": [
+  {
+   "gram_size": 9,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "0-162i",
+   "witness_support": [
+    [
+     1,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "case": "control 0: unmirrored_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "38988+38988i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     3,
+     0
+    ]
+   ],
+   "case": "control 1: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "link L1(2)-SL1(2)",
+    "link R1(2)-SR1(2)",
+    "local at L0",
+    "local at R0",
+    "distill L0,L1",
+    "distill R0,R1",
+    "local at L1",
+    "local at R1",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 9,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "0-8i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 2: one_sided_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "local at L0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 9,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "-24-10i",
+   "witness_support": [
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 3: unmirrored_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-SL0(3)",
+    "link R0(3)-SR0(3)",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 81,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "control 4: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(3)-R1(3)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 4,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "7-5i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 5: one_sided_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-SL0(2)",
+    "link R0(2)-SR0(2)",
+    "local at L0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "-64-64i",
+   "witness_support": [
+    [
+     2,
+     0
+    ]
+   ],
+   "case": "control 6: unmirrored_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(2)-SL1(2)",
+    "link R1(2)-SR1(2)",
+    "distill L1,R1",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 16,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "112-14i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     3,
+     0
+    ]
+   ],
+   "case": "control 7: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 4,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "link L1(2)-R1(2)",
+    "local at L0",
+    "local at R0",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 9,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "0+12i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 8: one_sided_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-SL0(3)",
+    "link R0(3)-SR0(3)",
+    "distill L0,R0",
+    "local at L0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 9,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "-36-96i",
+   "witness_support": [
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 9: unmirrored_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-SL0(3)",
+    "link R0(3)-SR0(3)",
+    "distill L0,R0",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "control 10: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "link L1(3)-SL1(2)",
+    "link R1(3)-SR1(2)",
+    "local at L0",
+    "local at R0",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "20-4i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 11: one_sided_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(2)-R1(2)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "local at L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "-28672-98304i",
+   "witness_support": [
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 12: unmirrored_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-SL0(2)",
+    "link R0(2)-SR0(2)",
+    "link L1(3)-SL1(2)",
+    "link R1(3)-SR1(2)",
+    "local at L1",
+    "local at R1",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L0,L1",
+    "distill R0,R1",
+    "local at L1",
+    "local at R1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 81,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "-128+128i",
+   "witness_support": [
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 14: one_sided_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-SL0(3)",
+    "link R0(3)-SR0(3)",
+    "link L1(3)-R1(3)",
+    "local at L0",
+    "local at R0",
+    "local at L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 9,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "27-36i",
+   "witness_support": [
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 15: unmirrored_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 81,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "control 16: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(3)-SL1(3)",
+    "link R1(3)-SR1(3)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L1,R1",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "256-256i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "case": "control 17: one_sided_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "link L1(2)-SL1(2)",
+    "link R1(2)-SR1(2)",
+    "local at L1",
+    "local at R1",
+    "distill L0,L1",
+    "distill R0,R1",
+    "local at L0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 9,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "-54+90i",
+   "witness_support": [
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 18: unmirrored_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "distill L0,R0",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "control 19: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "link L1(2)-SL1(3)",
+    "link R1(2)-SR1(3)",
+    "distill L0,R0",
+    "distill L0,R0",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 4,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "-384-256i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 20: one_sided_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "distill L0,R0",
+    "distill L0,R0",
+    "distill L0,R0",
+    "local at L0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "-1831884-323808i",
+   "witness_support": [
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 21: unmirrored_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "link L1(3)-R1(3)",
+    "distill L0,R0",
+    "local at L1",
+    "local at R1",
+    "local at L1",
+    "local at R1",
+    "local at L1",
+    "local at R1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 81,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "1800+1728i",
+   "witness_support": [
+    [
+     4,
+     4
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "case": "control 22: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(3)-R1(3)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L1,R1",
+    "local at L0",
+    "local at R0",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 4,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "16+8i",
+   "witness_support": [
+    [
+     1,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "case": "control 23: one_sided_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "distill L0,R0",
+    "local at L0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "-11744-6480i",
+   "witness_support": [
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 24: unmirrored_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-SL0(2)",
+    "link R0(2)-SR0(2)",
+    "link L1(3)-R1(3)",
+    "local at L1",
+    "local at R1",
+    "local at L1",
+    "local at R1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "control 25: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(2)-R1(2)",
+    "distill L0,R0",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 9,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "-4-8i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 26: one_sided_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "local at L0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 81,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "-160+24i",
+   "witness_support": [
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 27: unmirrored_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "link L1(3)-R1(3)",
+    "distill L0,R0",
+    "local at L1",
+    "local at R1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 81,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "9+9i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "case": "control 28: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-SL0(3)",
+    "link R0(3)-SR0(3)",
+    "link L1(3)-R1(3)",
+    "distill L1,R1",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 16,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "468+324i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 29: one_sided_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 4,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "link L1(2)-SL1(2)",
+    "link R1(2)-SR1(2)",
+    "distill L0,R0",
+    "local at L0",
+    "local at R0",
+    "local at L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 9,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "5-12i",
+   "witness_support": [
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 30: unmirrored_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "control 31: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "link L1(3)-R1(3)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 81,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "-244800-896400i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     3,
+     0
+    ]
+   ],
+   "case": "control 32: one_sided_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(3)-R1(3)",
+    "local at L1",
+    "local at R1",
+    "local at L0",
+    "local at R0",
+    "local at L0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 81,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "26656-6272i",
+   "witness_support": [
+    [
+     1,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "case": "control 33: unmirrored_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "link L1(3)-R1(3)",
+    "local at L0",
+    "local at R0",
+    "local at L1",
+    "local at R1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "control 34: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-SL0(3)",
+    "link R0(2)-SR0(3)",
+    "link L1(3)-R1(3)",
+    "local at L1",
+    "local at R1",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L0,R0",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "1104-3312i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 35: one_sided_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-SL0(2)",
+    "link R0(2)-SR0(2)",
+    "link L1(3)-SL1(3)",
+    "link R1(3)-SR1(3)",
+    "distill L1,R1",
+    "local at L0",
+    "local at R0",
+    "distill L0,L1",
+    "distill R0,R1",
+    "local at L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 9,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "972-2268i",
+   "witness_support": [
+    [
+     2,
+     0
+    ]
+   ],
+   "case": "control 36: unmirrored_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "distill L0,R0",
+    "distill L0,R0",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "69+69i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     3,
+     0
+    ]
+   ],
+   "case": "control 37: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-SL0(3)",
+    "link R0(3)-SR0(3)",
+    "link L1(2)-R1(2)",
+    "local at L1",
+    "local at R1",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 9,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "19+3i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 38: one_sided_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-SL0(3)",
+    "link R0(3)-SR0(3)",
+    "local at L0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 4,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "512+384i",
+   "witness_support": [
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 39: unmirrored_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-SL0(3)",
+    "link R0(2)-SR0(3)",
+    "distill L0,R0",
+    "local at L0",
+    "local at R0",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 81,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "9+9i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "case": "control 40: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "link L1(3)-R1(3)",
+    "distill L1,R1",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 16,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "16+32i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 41: one_sided_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 4,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "link L1(2)-SL1(2)",
+    "link R1(2)-SR1(2)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L1,R1",
+    "distill L0,L1",
+    "distill R0,R1",
+    "local at L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "0-16i",
+   "witness_support": [
+    [
+     2,
+     0
+    ]
+   ],
+   "case": "control 42: unmirrored_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "link L1(3)-SL1(3)",
+    "link R1(3)-SR1(3)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "local at L1",
+    "local at R1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "33152-384i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "case": "control 43: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-R0(2)",
+    "link L1(3)-R1(3)",
+    "local at L1",
+    "local at R1",
+    "local at L1",
+    "local at R1",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 9,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "122-194i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 44: one_sided_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "local at L0",
+    "local at R0",
+    "local at L0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 4,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "77-36i",
+   "witness_support": [
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 45: unmirrored_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-SL0(2)",
+    "link R0(2)-SR0(2)",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "23392+10336i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "case": "control 46: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-SL0(2)",
+    "link R0(2)-SR0(2)",
+    "link L1(3)-SL1(3)",
+    "link R1(3)-SR1(3)",
+    "local at L0",
+    "local at R0",
+    "local at L1",
+    "local at R1",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 9,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "4314-7190i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 47: one_sided_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 3,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "local at L0",
+    "local at R0",
+    "distill L0,R0",
+    "local at L0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 81,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "20736+1152i",
+   "witness_support": [
+    [
+     2,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "case": "control 48: unmirrored_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(3)-SL1(3)",
+    "link R1(3)-SR1(3)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "local at L0",
+    "local at R0",
+    "local at L1",
+    "local at R1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 81,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "control 49: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(3)-SL1(3)",
+    "link R1(3)-SR1(3)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 16,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "24-24i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "case": "control 50: one_sided_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 4,
+   "construction": [
+    "link L0(2)-SL0(2)",
+    "link R0(2)-SR0(2)",
+    "link L1(2)-R1(2)",
+    "distill L1,R1",
+    "distill L0,L1",
+    "distill R0,R1",
+    "local at L0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 4,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "36+78i",
+   "witness_support": [
+    [
+     1,
+     0
+    ]
+   ],
+   "case": "control 51: unmirrored_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-SL0(3)",
+    "link R0(2)-SR0(3)",
+    "local at L0",
+    "local at R0",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "312-24i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     3,
+     0
+    ]
+   ],
+   "case": "control 52: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(2)-R1(2)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L1,R1",
+    "local at L0",
+    "local at R0",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 4,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "63744-27520i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "case": "control 53: one_sided_local",
+   "mirror": [
+    "L0<->R0"
+   ],
+   "left_dim": 2,
+   "construction": [
+    "link L0(2)-SL0(2)",
+    "link R0(2)-SR0(2)",
+    "local at L0",
+    "local at R0",
+    "local at L0",
+    "local at R0",
+    "local at L0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 81,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "198-444i",
+   "witness_support": [
+    [
+     3,
+     0
+    ]
+   ],
+   "case": "control 54: unmirrored_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-SL0(2)",
+    "link R0(3)-SR0(2)",
+    "link L1(3)-SL1(3)",
+    "link R1(3)-SR1(3)",
+    "distill L0,R0",
+    "distill L0,L1",
+    "distill R0,R1",
+    "distill L1,R1",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": true,
+   "rp": true,
+   "os_hilbert_dim": 1,
+   "certificate": "LDL^T with 2 positive pivots, remainder exactly zero",
+   "case": "control 55: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-SL0(3)",
+    "link R0(2)-SR0(3)",
+    "link L1(3)-R1(3)",
+    "distill L0,R0",
+    "local at L1",
+    "local at R1",
+    "distill L1,R1",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "5184+5184i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "case": "control 56: one_sided_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(2)-R1(2)",
+    "local at L1",
+    "local at R1",
+    "local at L1",
+    "local at R1",
+    "local at L0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 36,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "0+128i",
+   "witness_support": [
+    [
+     3,
+     0
+    ]
+   ],
+   "case": "control 57: unmirrored_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 6,
+   "construction": [
+    "link L0(2)-SL0(3)",
+    "link R0(2)-SR0(3)",
+    "link L1(3)-SL1(2)",
+    "link R1(3)-SR1(2)",
+    "distill L0,L1",
+    "distill R0,R1",
+    "local at L0",
+    "local at R0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 81,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "9+9i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "case": "control 58: one_sided_distill",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(3)-SL1(2)",
+    "link R1(3)-SR1(2)",
+    "distill L0,R0",
+    "distill L0,L1"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  },
+  {
+   "gram_size": 81,
+   "hermitian": false,
+   "rp": false,
+   "witness_form": "135+27i",
+   "witness_support": [
+    [
+     0,
+     0
+    ],
+    [
+     3,
+     0
+    ]
+   ],
+   "case": "control 59: one_sided_local",
+   "mirror": [
+    "L0<->R0",
+    "L1<->R1"
+   ],
+   "left_dim": 9,
+   "construction": [
+    "link L0(3)-R0(3)",
+    "link L1(3)-SL1(3)",
+    "link R1(3)-SR1(3)",
+    "distill L0,R0",
+    "distill L1,R1",
+    "local at L0"
+   ],
+   "expected_rp": null,
+   "note": "",
+   "matches_expectation": null
+  }
+ ]
+}
