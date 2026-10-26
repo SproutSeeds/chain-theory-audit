@@ -41,3 +41,7 @@ Recorded outputs are in `results/`.
   - Lieb 1989 and Lieb–Schupp for `ChainRP.lean`.
 
 Corrections are welcome by issue.
+
+## License
+
+Apache License 2.0 (see [LICENSE](LICENSE)). Copyright 2026 Cody Mitchell.
