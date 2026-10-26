@@ -30,6 +30,9 @@ The results are in **[REPORT.md](REPORT.md)**. In brief:
 | A link as a reflection-positive double (numerical) | `python3 analysis/rp_double_check.py` | `numpy` |
 | How the (2,4) witness was found (SDP, exact rationalization) | see `analysis/dark24/README.md` | `cvxpy`, `numpy` |
 | Lean proofs | `cd lean && lake update && lake exe cache get && cd .. && python3 scripts/check_lean.py` | Lean 4.26.0 and Mathlib v4.26.0 |
+| Two-mirror dictionary and darkness atlas (§8) | `python3 analysis/readcap_mirror.py` | `cvxpy` with Clarabel, `numpy` |
+| Blind-test protocol, log check and dry run (§9) | `python3 analysis/blind_test.py verify` | standard library and `numpy` |
+| Has the author published anything new? | `python3 scripts/watch_sources.py check` | network access |
 
 Recorded outputs are in `results/`.
 

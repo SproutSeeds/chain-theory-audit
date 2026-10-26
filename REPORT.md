@@ -34,6 +34,12 @@ Every Verified or Exact claim names the command that checks it.
   - The dark direction of the Letter's `ReadCap` hypothesis: every type with d₁d₂ ≥ 8 has a
     positive, non-decomposable map between its ends. This is proved in Lean via the Choi map and
     an explicit integer map M₂ → M₄.
+  - The readable direction is reduced, in Lean, to Woronowicz's theorem for M₂ → M₃: the Letter's
+    `ReadCap` holds for its own readability exactly when that theorem does (§7).
+  - Readability is a two-mirror reflection-positivity condition on reads. Dark reads are rare among
+    random positive maps but robust near the Choi map and Φ₂₄ (§8).
+- **Prepared.** A registered protocol for scoring the theory's future numbers blind, with a dry run on
+  the numbers it has already printed (§9).
 
 ## 1. Replication
 
@@ -211,6 +217,66 @@ Choi. `ChoiDark.lean` proves the (3,3) instance of the dark direction:
   Letter's own readability, the read cap holds exactly when every positive map M₂ → M₃ is
   decomposable (Woronowicz 1976), which is not formalized here. Compression and Hilbert–Schmidt
   adjoints reduce (2,2) and (3,2) to (2,3). 18 theorems.
+
+## 8. Readable as a two-mirror test, and how rare darkness is
+
+Hook: `analysis/readcap_mirror.py` → `results/readcap_mirror.json` (seeded; about 5 minutes with Clarabel).
+
+- **The dictionary.** Label: Exact; 78 random checks agree.
+  - Vectorize an operator W on ℂ^{d₁}⊗ℂ^{d₂} as a state on (ket, ket | bra, bra).
+  - For a coefficient matrix C the Osterwalder–Schrader form is tr(C†FCF†). For Hermitian C its form
+    matrix has eigenvalues λᵢλⱼ, so it is nonnegative for every F exactly when C is semidefinite.
+  - The mirror that reflects kets onto bras has coefficient matrix W. The mirror that also swaps the
+    second factor's ket and bra has W^Γ.
+  - So W ⪰ 0 and W^Γ ⪰ 0 are reflection positivity for two different mirrors. A map is decomposable
+    exactly when its Choi matrix splits into a part positive for the first mirror and a part positive
+    for the second.
+  - This repackages published results: reflection positivity ⇔ complete positivity (Zhao–Liu,
+    arXiv:2510.20662, Thm 2.7; Jaffe–Janssens, arXiv:1506.04197), and the partial transpose as a
+    different cut or a local time reversal (Calabrese–Cardy–Tonni; Sanpera–Tarrach–Vidal).
+- **State-level reflection positivity cannot see darkness.** Label: Verified.
+  - A mirrored read Φ ⊗ Φ̄ keeps every reflection-positive state reflection positive, for every
+    linear Φ: the dark Choi map, and even a random linear map that is not positive.
+  - This is why dark pairs are as reflection positive as readable ones (§6).
+- **How common are dark reads?** Label: Verified numerics, in the stated ensemble.
+  - Random boundary positive maps W = H − μ(H)·1 (H from the Gaussian unitary ensemble; μ the minimum
+    over product vectors) were tested against PPT states by semidefinite programming.
+  - None of 1,850 was dark, in any of 2×2, 2×3, 3×2, 2×4, 3×3 (300 each), 3×4 (200) or 4×4 (150).
+  - Dark maps still fill open regions. The Choi map stays dark under random perturbations of 10% of its
+    norm (60/60), and partly at 30% (37/60). Φ₂₄ stays dark up to 3% (58/60).
+  - Normalized darkness margins: Choi −0.0258, Φ₂₄ −0.0036.
+  - Darkness is real and robust near special maps, but a random read on a dark link is almost always
+    decomposable.
+
+## 9. Blind tests of future numbers
+
+Hooks: `analysis/blind_test.py`, `results/blind_log.jsonl` (hash chained; `python3 analysis/blind_test.py
+verify`), `results/blind_dryrun.json`, `scripts/watch_sources.py`.
+
+- **Protocol** `blind-protocol/v1` (sha256 `fb3547453e63c1a091f6ac13a0a864e20ed87d91d348bc2ece700c7a0283404c`,
+  entry 0 of the log).
+  - A number is registered before it is compared with measurement.
+  - The measurement verdict uses §4's rule.
+  - The luck test counts how many formulas of the same grammar, no more complex than the prediction,
+    land at least as close.
+  - Unidentified numbers are never matched against lists of constants.
+- **Dry run on the ledger's numbers.** Not blind: they were known before the protocol.
+  - **α.** Consistent (z = 0.60 against CODATA 2022 as published, 1.40 unexpanded).
+    - Against the Letter's listed alternatives (§2) the match is surprising.
+    - Against all formulas of its own form and size (coefficients ≤ 79, denominator 2⁷3⁵) about 0.013
+      chance hits are expected: P ≈ 1.3%.
+  - **Inferred mass ratios.** All nine readings of m_μ/m_e, m_τ/m_e and m_p/m_e as squared ratios of
+    the compendium's first powers are excluded. The nearest misses are as close as fractions with
+    denominator ≤ 67 give by chance.
+  - **Koide and the weak angle.**
+    - The compendium's own Koide values are excluded. Its "two thirds" agrees, but that relation is
+      Koide's (1981).
+    - cos²θ_W = 1/2 is excluded at the on-shell value 0.7768.
+  - **Unscoreable.**
+    - "Largest Jarlskog square = 1/108" is the mathematical maximum of J² for any 3×3 unitary.
+    - Λ = 36⁻⁶³ and the Higgs displays carry no unit or scale.
+- **Source watch.** `scripts/watch_sources.py check` compares the live Letter, compendium and talk and
+  the head of github.com/alexwg/chain-theory with the 25 Oct copies. On 26 Oct nothing had changed.
 
 ## Sources
 

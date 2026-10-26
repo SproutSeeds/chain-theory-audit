@@ -1,0 +1,189 @@
+{
+ "checked_at": "2026-10-26T08:16:55.447374+00:00",
+ "seed": 20261026,
+ "A_dictionary": {
+  "checked": 78,
+  "rp_iff_semidefinite_all": true,
+  "form_eigenvalues_are_products_all": true,
+  "max_form_hermiticity_error": 0.0,
+  "counts": {
+   "M1": {
+    "rp": 13,
+    "total": 39
+   },
+   "M2": {
+    "rp": 13,
+    "total": 39
+   }
+  }
+ },
+ "B_naive_versions": {
+  "B1_mirrored_reads": {
+   "identity": {
+    "rp_min_eig": 0.3333333333333334,
+    "rp_hermitian_err": 0.0,
+    "state_min_eig": -1.8397461312486606e-16,
+    "reflection_positive": true
+   },
+   "transpose": {
+    "rp_min_eig": 0.3333333333333334,
+    "rp_hermitian_err": 0.0,
+    "state_min_eig": -1.8397461312486606e-16,
+    "reflection_positive": true
+   },
+   "choi_map_dark": {
+    "rp_min_eig": 0.3333333333333334,
+    "rp_hermitian_err": 0.0,
+    "state_min_eig": 0.3333333333333334,
+    "reflection_positive": true
+   },
+   "random_linear_not_positive": {
+    "rp_min_eig": 0.043158539133359354,
+    "rp_hermitian_err": 4.440892098500626e-16,
+    "state_min_eig": -6.933112984723591,
+    "reflection_positive": true
+   }
+  },
+  "B2_single_coupling": {
+   "read": "X -> s_x X s_x (completely positive)",
+   "X": "s_z",
+   "hs_pairing": -2.0
+  }
+ },
+ "D_explicit_margins": {
+  "choi_3x3": -0.025783422954852347,
+  "choi_extended_3x4": -0.02578342298399947,
+  "choi_extended_4x4": -0.025783421103971152,
+  "phi24_2x4": -0.0036275729829914755
+ },
+ "C_atlas": {
+  "2x2": {
+   "samples": 300,
+   "dark": 0,
+   "fraction_dark": 0.0,
+   "delta_min": 8.976080122236052e-11,
+   "delta_median": 2.671289898916601e-09,
+   "delta_min_shifted": 3.252779198562039e-07,
+   "dark_deltas_quantiles": [],
+   "seconds": 10.2
+  },
+  "2x3": {
+   "samples": 300,
+   "dark": 0,
+   "fraction_dark": 0.0,
+   "delta_min": 1.5136164197016022e-10,
+   "delta_median": 2.8294725989280733e-09,
+   "delta_min_shifted": 2.417283296472436e-07,
+   "dark_deltas_quantiles": [],
+   "seconds": 18.3
+  },
+  "3x2": {
+   "samples": 300,
+   "dark": 0,
+   "fraction_dark": 0.0,
+   "delta_min": 1.6199772079339425e-10,
+   "delta_median": 3.3591739979910162e-09,
+   "delta_min_shifted": 2.4527118459329034e-07,
+   "dark_deltas_quantiles": [],
+   "seconds": 14.4
+  },
+  "2x4": {
+   "samples": 300,
+   "dark": 0,
+   "fraction_dark": 0.0,
+   "delta_min": 1.6608763041096875e-10,
+   "delta_median": 2.878244056781561e-09,
+   "delta_min_shifted": 2.210604269083197e-07,
+   "dark_deltas_quantiles": [],
+   "seconds": 35.1
+  },
+  "3x3": {
+   "samples": 300,
+   "dark": 0,
+   "fraction_dark": 0.0,
+   "delta_min": 2.043340266953686e-10,
+   "delta_median": 3.7103547274527915e-09,
+   "delta_min_shifted": 2.0400512255012992e-07,
+   "dark_deltas_quantiles": [],
+   "seconds": 35.3
+  },
+  "3x4": {
+   "samples": 200,
+   "dark": 0,
+   "fraction_dark": 0.0,
+   "delta_min": 1.2489642133017842e-10,
+   "delta_median": 3.223951042762019e-09,
+   "delta_min_shifted": 1.7570806883863282e-07,
+   "dark_deltas_quantiles": [],
+   "seconds": 48.7
+  },
+  "4x4": {
+   "samples": 150,
+   "dark": 0,
+   "fraction_dark": 0.0,
+   "delta_min": 3.2404159520590947e-10,
+   "delta_median": 3.3980722071957317e-09,
+   "delta_min_shifted": 1.5958367869288524e-07,
+   "dark_deltas_quantiles": [],
+   "seconds": 87.1
+  }
+ },
+ "C2_dark_neighbourhoods": {
+  "choi_3x3": {
+   "0.01": {
+    "samples": 60,
+    "dark": 60,
+    "fraction_dark": 1.0
+   },
+   "0.03": {
+    "samples": 60,
+    "dark": 60,
+    "fraction_dark": 1.0
+   },
+   "0.1": {
+    "samples": 60,
+    "dark": 60,
+    "fraction_dark": 1.0
+   },
+   "0.3": {
+    "samples": 60,
+    "dark": 37,
+    "fraction_dark": 0.6166666666666667
+   },
+   "1.0": {
+    "samples": 60,
+    "dark": 0,
+    "fraction_dark": 0.0
+   }
+  },
+  "phi24_2x4": {
+   "0.01": {
+    "samples": 60,
+    "dark": 60,
+    "fraction_dark": 1.0
+   },
+   "0.03": {
+    "samples": 60,
+    "dark": 58,
+    "fraction_dark": 0.9666666666666667
+   },
+   "0.1": {
+    "samples": 60,
+    "dark": 8,
+    "fraction_dark": 0.13333333333333333
+   },
+   "0.3": {
+    "samples": 60,
+    "dark": 0,
+    "fraction_dark": 0.0
+   },
+   "1.0": {
+    "samples": 60,
+    "dark": 0,
+    "fraction_dark": 0.0
+   }
+  }
+ },
+ "C_atlas_protocol": "H from the Gaussian unitary ensemble, normalized; mu(H) by alternating eigen-steps from 48 random starts; W = H - mu 1; delta by Clarabel on the PPT cone; a map counts as dark if delta(W + 1e-6 * 1) < -1e-6 (guards against an over-estimated mu).",
+ "seconds": 321.1
+}

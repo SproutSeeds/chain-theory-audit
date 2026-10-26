@@ -1,0 +1,32 @@
+{
+ "baseline_from": "local copies downloaded 2026-10-25",
+ "recorded_at": "2026-10-26T08:21:23.296330+00:00",
+ "files": {
+  "ChainTheoryAlpha.pdf": "4bd42b02d8e7fc986c04a1dd2cb9d31fbf0f25b9df8bcf862b907dd45bc22009",
+  "ChainTheoryCompendium.pdf": "cdd99bf011bd908fc226591d7c69a62c08985dd30e126cf0b26c43b7cc5abbc9",
+  "ChainTheoryTalk.pdf": "a49239e7701681b55414857fb7ff5be9a114724813672b92d2ad323d6273540c"
+ },
+ "repo_head": "a28db8998bce5bd5ef11195c05f13c86cd9dac5c",
+ "checks": [
+  {
+   "checked_at": "2026-10-26T08:21:23.585933+00:00",
+   "files": {
+    "ChainTheoryAlpha.pdf": {
+     "sha256": "4bd42b02d8e7fc986c04a1dd2cb9d31fbf0f25b9df8bcf862b907dd45bc22009",
+     "changed": false
+    },
+    "ChainTheoryCompendium.pdf": {
+     "sha256": "cdd99bf011bd908fc226591d7c69a62c08985dd30e126cf0b26c43b7cc5abbc9",
+     "changed": false
+    },
+    "ChainTheoryTalk.pdf": {
+     "sha256": "a49239e7701681b55414857fb7ff5be9a114724813672b92d2ad323d6273540c",
+     "changed": false
+    }
+   },
+   "repo_head": "a28db8998bce5bd5ef11195c05f13c86cd9dac5c",
+   "repo_changed": false,
+   "any_change": false
+  }
+ ]
+}

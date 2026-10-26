@@ -1,0 +1,23 @@
+A: True
+B: {"B1_mirrored_reads": {"identity": {"rp_min_eig": 0.3333333333333334, "rp_hermitian_err": 0.0, "state_min_eig": -1.8397461312486606e-16, "reflection_positive": true}, "transpose": {"rp_min_eig": 0.3333333333333334, "rp_hermitian_err": 0.0, "state_min_eig": -1.8397461312486606e-16, "reflection_positi
+D: {'choi_3x3': -0.025783422954852347, 'choi_extended_3x4': -0.02578342298399947, 'choi_extended_4x4': -0.025783421103971152, 'phi24_2x4': -0.0036275729829914755}
+analysis/readcap_mirror.py:212: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  prob.solve(solver="CLARABEL")
+2x2: 0/300 dark, delta min 8.976e-11
+2x3: 0/300 dark, delta min 1.514e-10
+3x2: 0/300 dark, delta min 1.620e-10
+2x4: 0/300 dark, delta min 1.661e-10
+3x3: 0/300 dark, delta min 2.043e-10
+3x4: 0/200 dark, delta min 1.249e-10
+4x4: 0/150 dark, delta min 3.240e-10
+choi_3x3 t=0.01: 60/60 dark
+choi_3x3 t=0.03: 60/60 dark
+choi_3x3 t=0.1: 60/60 dark
+choi_3x3 t=0.3: 37/60 dark
+choi_3x3 t=1.0: 0/60 dark
+phi24_2x4 t=0.01: 60/60 dark
+phi24_2x4 t=0.03: 58/60 dark
+phi24_2x4 t=0.1: 8/60 dark
+phi24_2x4 t=0.3: 0/60 dark
+phi24_2x4 t=1.0: 0/60 dark
+written results/readcap_mirror.json

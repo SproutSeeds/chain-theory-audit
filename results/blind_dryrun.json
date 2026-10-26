@@ -1,0 +1,315 @@
+{
+ "seq": 1,
+ "time": "2026-10-26T08:21:05.778675+00:00",
+ "kind": "dryrun",
+ "payload": {
+  "label": "NOT blind: the ledger's numbers were seen on 25 Oct before this protocol",
+  "protocol_sha256": "4abff7f5b0b55327ccfad6e4a008594597d54851d0009c2df4226e8c720085f3",
+  "rows": [
+   {
+    "number": "alpha candidate (the Letter)",
+    "identified_by": "source (Conjecture 1)",
+    "measurement": {
+     "z": 0.5983879635182564,
+     "verdict": "consistent"
+    },
+    "measurement_unexpanded": {
+     "z": 1.400733497445929,
+     "verdict": "consistent"
+    },
+    "luck_own_grammar": {
+     "grammar": "(n1 + n2 sqrt2 + n3 sqrt3 + n4 sqrt6)/(2^p 3^q)",
+     "C": 79,
+     "P": 7,
+     "Q": 5,
+     "window": 2.1e-08,
+     "density_per_unit_inverse": 317120.0,
+     "lambda": 0.013319039999999999,
+     "realized_distinct_values_as_close_including_prediction": 1,
+     "P_chance": 0.013230734071560946,
+     "luck": "weakly surprising"
+    },
+    "luck_census_of_listed_alternatives": {
+     "expected_chance_1sigma_hits": 5.6e-07,
+     "luck": "surprising"
+    },
+    "note": "Two null families give opposite answers: the paper's own listed alternatives make the match surprising; all formulas of the same algebraic form and size do not."
+   },
+   {
+    "number": "m_mu/m_e = 4761/4489 (p. 77, eq. (29), one reading)",
+    "identified_by": "our inference from p. 122 ('mass office is its Born square')",
+    "measurement": {
+     "z": -44719063.07400215,
+     "verdict": "excluded"
+    },
+    "luck_own_grammar": {
+     "grammar": "(a/b)^2",
+     "B": 67,
+     "window": 205.70769014040988,
+     "lambda": 19519.9940944216,
+     "realized_members_as_close": 19943,
+     "P_chance": 1.0,
+     "luck": "not applicable (excluded)",
+     "near_miss": "a miss as close as chance gives"
+    }
+   },
+   {
+    "number": "m_tau/m_e = 186624/4489 (p. 77, eq. (29), one reading)",
+    "identified_by": "our inference from p. 122 ('mass office is its Born square')",
+    "measurement": {
+     "z": -14937.636415585925,
+     "verdict": "excluded"
+    },
+    "luck_own_grammar": {
+     "grammar": "(a/b)^2",
+     "B": 67,
+     "window": 3435.656375584763,
+     "lambda": 79499.4503950781,
+     "realized_members_as_close": 81217,
+     "P_chance": 1.0,
+     "luck": "not applicable (excluded)",
+     "near_miss": "a miss as close as chance gives"
+    }
+   },
+   {
+    "number": "m_p/m_e = 7338681/4489 (p. 77, eq. (29), one reading)",
+    "identified_by": "our inference from p. 122 ('mass office is its Born square')",
+    "measurement": {
+     "z": -6291826903.328378,
+     "verdict": "excluded"
+    },
+    "luck_own_grammar": {
+     "grammar": "(a/b)^2",
+     "B": 67,
+     "window": 201.3384609065081,
+     "lambda": 6411.261107351806,
+     "realized_members_as_close": 6550,
+     "P_chance": 1.0,
+     "luck": "not applicable (excluded)",
+     "near_miss": "a miss as close as chance gives"
+    }
+   },
+   {
+    "number": "m_mu/m_e = 385641/4489 (p. 79, eq. (31), first power at the stop clause)",
+    "identified_by": "our inference from p. 122 ('mass office is its Born square')",
+    "measurement": {
+     "z": -26273975.081130683,
+     "verdict": "excluded"
+    },
+    "luck_own_grammar": {
+     "grammar": "(a/b)^2",
+     "B": 67,
+     "window": 120.86028537320115,
+     "lambda": 11468.662426400695,
+     "realized_members_as_close": 11718,
+     "P_chance": 1.0,
+     "luck": "not applicable (excluded)",
+     "near_miss": "a miss as close as chance gives"
+    }
+   },
+   {
+    "number": "m_tau/m_e = 186624/4489 (p. 79, eq. (31), first power at the stop clause)",
+    "identified_by": "our inference from p. 122 ('mass office is its Born square')",
+    "measurement": {
+     "z": -14937.636415585925,
+     "verdict": "excluded"
+    },
+    "luck_own_grammar": {
+     "grammar": "(a/b)^2",
+     "B": 67,
+     "window": 3435.656375584763,
+     "lambda": 79499.4503950781,
+     "realized_members_as_close": 81217,
+     "P_chance": 1.0,
+     "luck": "not applicable (excluded)",
+     "near_miss": "a miss as close as chance gives"
+    }
+   },
+   {
+    "number": "m_p/m_e = 74183769/4489 (p. 79, eq. (31), first power at the stop clause)",
+    "identified_by": "our inference from p. 122 ('mass office is its Born square')",
+    "measurement": {
+     "z": 459047669643.78674,
+     "verdict": "excluded"
+    },
+    "luck_own_grammar": {
+     "grammar": "(a/b)^2",
+     "B": 67,
+     "window": 14689.525428601177,
+     "lambda": 467761.5128367253,
+     "realized_members_as_close": 477873,
+     "P_chance": 1.0,
+     "luck": "not applicable (excluded)",
+     "near_miss": "a miss as close as chance gives"
+    }
+   },
+   {
+    "number": "m_mu/m_e = 927369/4489 (p. 79, eq. (31) and p. 95, eq. (45), derived cells)",
+    "identified_by": "our inference from p. 122 ('mass office is its Born square')",
+    "measurement": {
+     "z": -39411.36499365242,
+     "verdict": "excluded"
+    },
+    "luck_own_grammar": {
+     "grammar": "(a/b)^2",
+     "B": 67,
+     "window": 0.18129227897080114,
+     "lambda": 17.2031692760673,
+     "realized_members_as_close": 14,
+     "P_chance": 0.9999999662123091,
+     "luck": "not applicable (excluded)",
+     "near_miss": "a miss as close as chance gives"
+    }
+   },
+   {
+    "number": "m_tau/m_e = 15752961/4489 (p. 79, eq. (31) and p. 95, eq. (45), derived cells)",
+    "identified_by": "our inference from p. 122 ('mass office is its Born square')",
+    "measurement": {
+     "z": 139.15709899561276,
+     "verdict": "excluded"
+    },
+    "luck_own_grammar": {
+     "grammar": "(a/b)^2",
+     "B": 67,
+     "window": 32.00613276899094,
+     "lambda": 740.6066516106692,
+     "realized_members_as_close": 756,
+     "P_chance": 1.0,
+     "luck": "not applicable (excluded)",
+     "near_miss": "a miss as close as chance gives"
+    }
+   },
+   {
+    "number": "m_p/m_e = 8242641/4489 (p. 79, eq. (31) and p. 95, eq. (45), derived cells)",
+    "identified_by": "our inference from p. 122 ('mass office is its Born square')",
+    "measurement": {
+     "z": 1055698.5874217162,
+     "verdict": "excluded"
+    },
+    "luck_own_grammar": {
+     "grammar": "(a/b)^2",
+     "B": 67,
+     "window": 0.03378235479749492,
+     "lambda": 1.0757383187135403,
+     "realized_members_as_close": 1,
+     "P_chance": 0.6589541382183421,
+     "luck": "not applicable (excluded)",
+     "near_miss": "a miss as close as chance gives"
+    }
+   },
+   {
+    "number": "Koide K1_dock = 16684819/24990001",
+    "identified_by": "source prints it beside 2/3",
+    "measurement": {
+     "z": 150.59118623920338,
+     "verdict": "excluded",
+     "measured": 0.6666605612256059,
+     "sigma": 6.635421446909984e-06
+    },
+    "luck_own_grammar": {
+     "grammar": "a/b",
+     "B": 24990001,
+     "window": 0.0009992359868872258,
+     "lambda": 379360508273.8333,
+     "realized_members_as_close": null,
+     "P_chance": 1.0,
+     "luck": "not applicable (excluded)",
+     "near_miss": "a miss as close as chance gives"
+    }
+   },
+   {
+    "number": "Koide K1_hub = 1857859/2927521",
+    "identified_by": "source prints it beside 2/3",
+    "measurement": {
+     "z": -4828.940649881341,
+     "verdict": "excluded",
+     "measured": 0.6666605612256059,
+     "sigma": 6.635421446909984e-06
+    },
+    "luck_own_grammar": {
+     "grammar": "a/b",
+     "B": 2927521,
+     "window": 0.032042056354078086,
+     "lambda": 166944425926.28076,
+     "realized_members_as_close": null,
+     "P_chance": 1.0,
+     "luck": "not applicable (excluded)",
+     "near_miss": "a miss as close as chance gives"
+    }
+   },
+   {
+    "number": "Koide 2/3 = 2/3",
+    "identified_by": "source: 'equals two thirds in the field at no reading' (Open result 157.1); the relation is Koide's (1981), not original to Chain Theory; the source's own computed values (K1_dock, K1_hub) do not give it",
+    "measurement": {
+     "z": 0.9201286021651548,
+     "verdict": "consistent",
+     "measured": 0.6666605612256059,
+     "sigma": 6.635421446909984e-06
+    },
+    "luck_own_grammar": {
+     "grammar": "a/b",
+     "B": 3,
+     "window": 6.635421446909984e-06,
+     "lambda": 3.6304672768200345e-05,
+     "realized_members_as_close": 0,
+     "P_chance": 3.630401376153447e-05,
+     "luck": "surprising"
+    }
+   },
+   {
+    "number": "cos^2 theta_W = 1/2 (Theorem 164.5, conditional)",
+    "identified_by": "source",
+    "measurement": {
+     "z": -1066.3433665986265,
+     "verdict": "excluded",
+     "measured_on_shell": 0.7767973220499053,
+     "sigma": 0.000259576165351711
+    },
+    "luck_own_grammar": {
+     "grammar": "a/b",
+     "B": 2,
+     "window": 0.27679732204990526,
+     "lambda": 0.6730903751790183,
+     "realized_members_as_close": 1,
+     "P_chance": 0.48987035270072576,
+     "luck": "not applicable (excluded)",
+     "near_miss": "a somewhat close miss"
+    },
+    "note": "The source states no energy scale; compared with the on-shell value MW^2/MZ^2."
+   },
+   {
+    "number": "generations = 3 (Theorem 83.1, at the adopted reading)",
+    "identified_by": "source",
+    "measurement": {
+     "z": 0.4999999999999749,
+     "verdict": "consistent",
+     "measured_N_nu": "2.9963(74), PDG 2024"
+    },
+    "luck_own_grammar": {
+     "grammar": "small integers",
+     "P_chance": null,
+     "luck": "not assessable: any small-integer family hits 3 by construction"
+    },
+    "note": "Other readings print other counts (Open result 67.1: two)."
+   },
+   {
+    "number": "largest Jarlskog square = 1/108 (p. 391)",
+    "unscoreable": "a mathematical bound, not a prediction: |J| <= 1/(6 sqrt3) for every 3x3 unitary matrix, so J^2 <= 1/108; the measured J ~ 3e-5 is far below it"
+   },
+   {
+    "number": "Lambda = 36^-63 (Theorem 115.1, conditional)",
+    "unscoreable": "no unit is fixed ('compared with nothing here')"
+   },
+   {
+    "number": "Higgs displays 16/67, 12/67 (p. 492)",
+    "unscoreable": "no GeV scale is fixed"
+   },
+   {
+    "number": "alpha_joined = 42^2 = 1764 (p. 343)",
+    "unscoreable": "no measured quantity is named"
+   }
+  ]
+ },
+ "prev_hash": "fb3547453e63c1a091f6ac13a0a864e20ed87d91d348bc2ece700c7a0283404c",
+ "hash": "2c7a6ad5318c09655d074759a8431d912298c7d71f4073cd6ca54a5e61144508"
+}
