@@ -14,7 +14,7 @@ The results are in **[REPORT.md](REPORT.md)**. In brief:
 | Against the unexpanded CODATA inputs the candidate is 1.4σ off (0.6σ with CODATA's ×2.5 expansion) | Verified |
 | The photon identification conflicts with the program's own charge assignment, unbroken generator and weak angle | Exact, given the Letter's assignments |
 | Maximally entangled links straight across a mirror are Osterwalder–Schrader reflection positive (Lean) | Verified |
-| Every link type with both ends at least 3 is dark: the Choi map and its extensions are positive and not decomposable (Lean) | Verified |
+| The dark direction of the read cap: every type with d₁d₂ ≥ 8 has a positive, non-decomposable map between its ends (Lean; includes an explicit integer map M₂ → M₄) | Verified |
 | A timestamped ledger of the theory's numbers, fixed before new measurements | Verified (values) |
 
 ## Reproduce
@@ -28,6 +28,7 @@ The results are in **[REPORT.md](REPORT.md)**. In brief:
 | Internal consistency checks | `python3 analysis/consistency_checks.py` | `mpmath` |
 | Reflection-positivity certificates | `python3 analysis/rp_chain_webs.py` | standard library only |
 | A link as a reflection-positive double (numerical) | `python3 analysis/rp_double_check.py` | `numpy` |
+| How the (2,4) witness was found (SDP, exact rationalization) | see `analysis/dark24/README.md` | `cvxpy`, `numpy` |
 | Lean proofs | `cd lean && lake update && lake exe cache get && cd .. && python3 scripts/check_lean.py` | Lean 4.26.0 and Mathlib v4.26.0 |
 
 Recorded outputs are in `results/`.
