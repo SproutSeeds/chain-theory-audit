@@ -200,9 +200,13 @@ Choi. `ChoiDark.lean` proves the (3,3) instance of the dark direction:
   - The map and certificate were found by semidefinite programming and rationalized exactly
     (`analysis/dark24/`, `results/dark24_certificate.json`).
   - It extends to M₂ → M_d for every d ≥ 4.
-- **Conclusion.** `readable_imp_le_six`: if every positive map between the two ends of a type
-  (d₁, d₂), d₁, d₂ ≥ 2, is decomposable, then d₁d₂ ≤ 6. This is the dark half of the Letter's
+- **Conclusion.** `readable_imp_le_six`: if every positive linear map between the two ends of a
+  type (d₁, d₂), d₁, d₂ ≥ 2, is decomposable, then d₁d₂ ≤ 6. This is the dark half of the Letter's
   `ReadCap` hypothesis, for all four of its dark genres.
+- **Correction (26 Oct 2026).** The first published version of this theorem (commit `3b95151`)
+  held vacuously: its `Readable` ranged over all functions and its positivity asked only for a
+  nonnegative real part, so no type was readable (`lean/evidence/VacuityDemo.lean`). The
+  definitions now use linear maps and positive semidefiniteness; the concrete maps were unaffected.
 - **Not covered.** The readable direction (Størmer, Woronowicz).
 
 ## Sources

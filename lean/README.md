@@ -25,7 +25,18 @@ To use another Lake project with Mathlib v4.26.0 built, set `MATHLIB_PROJECT`.
 | `phi24_certificate`, `phi24_positive_psd` | An integer map Φ₂₄ : M₂ → M₄ is positive, by a sum-of-squares identity with multiplier ‖v‖² (found by SDP, rationalized exactly; see `analysis/dark24/`) |
 | `rho24_pt`, `W2_kraus`, `W2_transpose`, `W2_phi24`, `phi24_not_decomposable` | P. Horodecki's 2⊗4 PPT state at b = 3/5 gives witness −1 on Φ₂₄ and a sum of squares on every CP and co-CP part, so Φ₂₄ is not decomposable |
 | `extend24_positive`, `extend24_not_decomposable` | The same for its extension M₂ → M_d, d ≥ 4 |
-| `readable_imp_le_six` | **The dark direction of the read cap**: if every positive map between the ends of a type (d₁, d₂), d₁, d₂ ≥ 2, is decomposable, then d₁d₂ ≤ 6 |
+| `readable_imp_le_six` | **The dark direction of the read cap**: if every positive linear map between the ends of a type (d₁, d₂), d₁, d₂ ≥ 2, is decomposable, then d₁d₂ ≤ 6 |
+
+- **Definitions.** `Readable` ranges over ℂ-linear maps. `IsPositive` asks that every `w† Φ(Bᴴ B) w`
+  be real and nonnegative, which is positive semidefiniteness of `Φ(Bᴴ B)`.
+- **Correction, 26 Oct 2026.** Commit `3b95151` defined `Readable` over all functions and `IsPositive`
+  by a nonnegative real part only. Under those definitions no type is readable, so
+  `readable_imp_le_six` held vacuously. `lean/evidence/VacuityDemo.lean` proves `¬ Readable 2 2`
+  under the old definitions, twice: with a nonlinear map that vanishes on positive matrices, and with
+  the linear map X ↦ (1 + i) X. The concrete maps and their theorems were unaffected. With the
+  corrected definitions, `dark_33`, `dark_of_three_le` and `readable_imp_le_six` say what their
+  docstrings say. The theorem count (59) is unchanged; the positivity theorems now also prove that
+  the imaginary part vanishes.
 
 - **Scope.** The existence results are classical: Choi 1975, Woronowicz 1976, and the Horodecki
   families. The explicit integer (2,4) map and its certificate are new here. The readable direction

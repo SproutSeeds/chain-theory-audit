@@ -26,6 +26,16 @@ the (3,3) instance of the dark direction from scratch, with Choi's map:
   Part 8  The dark direction of the read cap: if every positive map between the ends of a type
           (d₁, d₂) with d₁, d₂ ≥ 2 is decomposable, then d₁ d₂ ≤ 6 (`readable_imp_le_six`).
 
+Definitions (Part 0): positive maps, decomposable maps and readability. `Readable` quantifies over
+ℂ-linear maps, and `IsPositive` asks that `w† Φ(Bᴴ B) w` be real and nonnegative, i.e. that `Φ` take
+positive semidefinite matrices to positive semidefinite ones.
+
+Revision, 26 Oct 2026: the version published on 25-26 Oct (public commit 3b95151) quantified over all
+functions and asked only for a nonnegative real part. With those definitions no type is readable (a
+nonlinear map vanishing on positive matrices, or the linear map X ↦ (1 + i) X, is "positive" but not
+decomposable), so `readable_imp_le_six` held vacuously. The explicit maps and their theorems were
+unaffected; the statements of `dark_33`, `dark_of_three_le` and `readable_imp_le_six` now carry content.
+
 Mathematical status: the existence statements are classical (Choi, Linear Algebra Appl. 12, 95 (1975);
 Woronowicz, Rep. Math. Phys. 10, 165 (1976); P. Horodecki, Phys. Lett. A 232, 333 (1997); Horodecki,
 Horodecki and Horodecki, PRL 80, 5239 (1998)). The explicit (2,4) map and its certificate are our own,
@@ -46,6 +56,26 @@ import Mathlib.Tactic.NormNum
 open Matrix
 
 namespace ChoiDark
+
+/-! ## Part 0. Definitions -/
+
+/-- A map `M_n(ℂ) → M_m(ℂ)` is positive: it takes every positive semidefinite `Bᴴ B` to a positive
+semidefinite matrix, i.e. every `w† Φ(Bᴴ B) w` is real and nonnegative. -/
+def IsPositive {n m : ℕ} (Φ : Matrix (Fin n) (Fin n) ℂ → Matrix (Fin m) (Fin m) ℂ) : Prop :=
+  ∀ (r : ℕ) (B : Matrix (Fin r) (Fin n) ℂ) (w : Fin m → ℂ),
+    0 ≤ (star w ⬝ᵥ (Φ (Bᴴ * B) *ᵥ w)).re ∧ (star w ⬝ᵥ (Φ (Bᴴ * B) *ᵥ w)).im = 0
+
+/-- A map is decomposable: a completely positive map plus a completely positive map composed with the
+transpose, both in Kraus form. -/
+def IsDecomposable {n m : ℕ} (Φ : Matrix (Fin n) (Fin n) ℂ → Matrix (Fin m) (Fin m) ℂ) : Prop :=
+  ∃ (p q : ℕ) (K : Fin p → Matrix (Fin m) (Fin n) ℂ) (L : Fin q → Matrix (Fin m) (Fin n) ℂ),
+    ∀ X, Φ X = ∑ k, K k * X * (K k)ᴴ + ∑ l, L l * Xᵀ * (L l)ᴴ
+
+/-- The Letter's readability of a type `(d₁, d₂)`: every positive linear map between the operator
+algebras of its two ends, in either direction, is decomposable. -/
+def Readable (d₁ d₂ : ℕ) : Prop :=
+  (∀ Φ : Matrix (Fin d₁) (Fin d₁) ℂ →ₗ[ℂ] Matrix (Fin d₂) (Fin d₂) ℂ, IsPositive Φ → IsDecomposable Φ) ∧
+  (∀ Ψ : Matrix (Fin d₂) (Fin d₂) ℂ →ₗ[ℂ] Matrix (Fin d₁) (Fin d₁) ℂ, IsPositive Ψ → IsDecomposable Ψ)
 
 /-! ## Part 1. Choi's inequality in real form -/
 
@@ -324,12 +354,25 @@ theorem choiMap_sum {ι : Type*} (s : Finset ι) (X : ι → M3) :
 
 /-- The Choi map takes every positive semidefinite matrix `Bᴴ B` to a positive semidefinite one. -/
 theorem choi_positive_psd {m : ℕ} (B : Matrix (Fin m) (Fin 3) ℂ) (w : Fin 3 → ℂ) :
-    0 ≤ (star w ⬝ᵥ (choiMap (Bᴴ * B) *ᵥ w)).re := by
+    0 ≤ (star w ⬝ᵥ (choiMap (Bᴴ * B) *ᵥ w)).re ∧ (star w ⬝ᵥ (choiMap (Bᴴ * B) *ᵥ w)).im = 0 := by
   have hB : Bᴴ * B = ∑ r, vecMulVec (fun i => star (B r i)) (star fun i => star (B r i)) := by
     ext i j
     simp [Matrix.mul_apply, Matrix.conjTranspose_apply, Matrix.sum_apply, vecMulVec_apply]
-  rw [hB, choiMap_sum, Matrix.sum_mulVec, dotProduct_sum, Complex.re_sum]
-  exact Finset.sum_nonneg fun r _ => (choi_positive _ w).1
+  rw [hB, choiMap_sum, Matrix.sum_mulVec, dotProduct_sum, Complex.re_sum, Complex.im_sum]
+  exact ⟨Finset.sum_nonneg fun r _ => (choi_positive _ w).1,
+    Finset.sum_eq_zero fun r _ => (choi_positive _ w).2⟩
+
+/-- The Choi map as a `ℂ`-linear map. -/
+def choiLin : M3 →ₗ[ℂ] M3 where
+  toFun := choiMap
+  map_add' X Y := by
+    ext i j
+    simp only [choiMap, Matrix.add_apply]
+    split_ifs <;> ring
+  map_smul' c X := by
+    ext i j
+    simp only [choiMap, Matrix.smul_apply, smul_eq_mul, RingHom.id_apply]
+    split_ifs <;> ring
 
 /-! ### The state is PPT and entangled -/
 
@@ -380,12 +423,10 @@ theorem rho_entangled :
 
 /-! ## Part 5. The (3,3) type is dark -/
 
-/-- **The (3,3) type is dark**: there is a positive map on `M₃(ℂ)`, taking every positive
+/-- **The (3,3) type is dark**: there is a positive linear map on `M₃(ℂ)`, taking every positive
 semidefinite `Bᴴ B` to a positive semidefinite matrix, that is not decomposable. -/
-theorem dark_33 : ∃ Φ : M3 → M3,
-    (∀ (m : ℕ) (B : Matrix (Fin m) (Fin 3) ℂ) (w : Fin 3 → ℂ), 0 ≤ (star w ⬝ᵥ (Φ (Bᴴ * B) *ᵥ w)).re) ∧
-    ¬ ∃ (m n : ℕ) (K : Fin m → M3) (L : Fin n → M3), ∀ X, Φ X = ∑ k, K k * X * (K k)ᴴ + ∑ l, L l * Xᵀ * (L l)ᴴ :=
-  ⟨choiMap, fun _ B w => choi_positive_psd B w, choi_not_decomposable⟩
+theorem dark_33 : ∃ Φ : M3 →ₗ[ℂ] M3, IsPositive Φ ∧ ¬ IsDecomposable Φ :=
+  ⟨choiLin, fun _ B w => choi_positive_psd B w, choi_not_decomposable⟩
 
 
 /-! ## Part 6. Every type with both ends of dimension at least three is dark
@@ -421,9 +462,23 @@ theorem quad_conj {n p : Type*} [Fintype n] [Fintype p] (J : Matrix n p ℂ) (M 
   rw [Matrix.star_mulVec, Matrix.conjTranspose_conjTranspose, ← Matrix.mulVec_mulVec,
     ← Matrix.mulVec_mulVec, Matrix.dotProduct_mulVec]
 
+/-- The extension as a `ℂ`-linear map. -/
+noncomputable def extendChoiLin (d₁ d₂ : ℕ) :
+    Matrix (Fin d₁) (Fin d₁) ℂ →ₗ[ℂ] Matrix (Fin d₂) (Fin d₂) ℂ where
+  toFun := extendChoi d₁ d₂
+  map_add' X Y := by
+    simp only [extendChoi, Matrix.mul_add, Matrix.add_mul]
+    rw [show choiMap _ = choiLin _ from rfl, choiLin.map_add]
+    simp only [show ∀ Z, choiLin Z = choiMap Z from fun _ => rfl, Matrix.mul_add, Matrix.add_mul]
+  map_smul' c X := by
+    simp only [extendChoi, Matrix.mul_smul, Matrix.smul_mul, RingHom.id_apply]
+    rw [show choiMap _ = choiLin _ from rfl, choiLin.map_smul]
+    simp only [show ∀ Z, choiLin Z = choiMap Z from fun _ => rfl, Matrix.mul_smul, Matrix.smul_mul]
+
 /-- The extension is positive. -/
 theorem extendChoi_positive (d₁ d₂ : ℕ) {m : ℕ} (B : Matrix (Fin m) (Fin d₁) ℂ) (w : Fin d₂ → ℂ) :
-    0 ≤ (star w ⬝ᵥ (extendChoi d₁ d₂ (Bᴴ * B) *ᵥ w)).re := by
+    0 ≤ (star w ⬝ᵥ (extendChoi d₁ d₂ (Bᴴ * B) *ᵥ w)).re ∧
+      (star w ⬝ᵥ (extendChoi d₁ d₂ (Bᴴ * B) *ᵥ w)).im = 0 := by
   unfold extendChoi
   rw [quad_conj]
   have hB : (incl d₁)ᴴ * (Bᴴ * B) * incl d₁ = (B * incl d₁)ᴴ * (B * incl d₁) := by
@@ -462,11 +517,8 @@ theorem extendChoi_not_decomposable {d₁ d₂ : ℕ} (h₁ : 3 ≤ d₁) (h₂ 
 a positive map `M_{d₁}(ℂ) → M_{d₂}(ℂ)` that is not decomposable. This covers Chain Theory's (3,3), (3,4),
 (4,3) and (4,4) genres; the (2,4) genre needs a separate map (Woronowicz's). -/
 theorem dark_of_three_le {d₁ d₂ : ℕ} (h₁ : 3 ≤ d₁) (h₂ : 3 ≤ d₂) :
-    ∃ Φ : Matrix (Fin d₁) (Fin d₁) ℂ → Matrix (Fin d₂) (Fin d₂) ℂ,
-      (∀ (m : ℕ) (B : Matrix (Fin m) (Fin d₁) ℂ) (w : Fin d₂ → ℂ), 0 ≤ (star w ⬝ᵥ (Φ (Bᴴ * B) *ᵥ w)).re) ∧
-      ¬ ∃ (m n : ℕ) (K : Fin m → Matrix (Fin d₂) (Fin d₁) ℂ) (L : Fin n → Matrix (Fin d₂) (Fin d₁) ℂ),
-        ∀ X, Φ X = ∑ k, K k * X * (K k)ᴴ + ∑ l, L l * Xᵀ * (L l)ᴴ :=
-  ⟨extendChoi d₁ d₂, fun _ B w => extendChoi_positive d₁ d₂ B w, extendChoi_not_decomposable h₁ h₂⟩
+    ∃ Φ : Matrix (Fin d₁) (Fin d₁) ℂ →ₗ[ℂ] Matrix (Fin d₂) (Fin d₂) ℂ, IsPositive Φ ∧ ¬ IsDecomposable Φ :=
+  ⟨extendChoiLin d₁ d₂, fun _ B w => extendChoi_positive d₁ d₂ B w, extendChoi_not_decomposable h₁ h₂⟩
 
 
 /-! ## Part 7. The (2,4) type is dark
@@ -521,21 +573,31 @@ theorem phi24_quad (v : Fin 2 → ℂ) (w : Fin 4 → ℂ) :
   simp
   ring
 
-/-- `Φ₂₄` is positive on rank-one inputs. -/
+/-- `Φ₂₄` is positive on rank-one inputs: `w† Φ₂₄(v v†) w` is real and nonnegative. -/
 theorem phi24_positive (v : Fin 2 → ℂ) (w : Fin 4 → ℂ) :
-    0 ≤ (star w ⬝ᵥ (phi24 (vecMulVec v (star v)) *ᵥ w)).re := by
+    0 ≤ (star w ⬝ᵥ (phi24 (vecMulVec v (star v)) *ᵥ w)).re ∧
+      (star w ⬝ᵥ (phi24 (vecMulVec v (star v)) *ᵥ w)).im = 0 := by
   have hc := phi24_certificate v w
   rw [← phi24_quad] at hc
   have h0 : v 0 * star (v 0) = (Complex.normSq (v 0) : ℂ) := Complex.mul_conj (v 0)
   have h1 : v 1 * star (v 1) = (Complex.normSq (v 1) : ℂ) := Complex.mul_conj (v 1)
+  have him : ∀ (c : ℚ) (z : ℂ), ((c : ℂ) * (z * star z)).im = 0 := fun c z => by
+    simp only [Complex.mul_im, Complex.mul_re, Complex.ratCast_re, Complex.ratCast_im,
+      Complex.star_def, Complex.conj_re, Complex.conj_im]
+    ring
   have hR : 0 ≤ (((Complex.normSq (v 0) + Complex.normSq (v 1) : ℝ) : ℂ)
       * (star w ⬝ᵥ (phi24 (vecMulVec v (star v)) *ᵥ w))).re := by
     rw [Complex.ofReal_add, ← h0, ← h1, hc]
     simp only [Complex.add_re]
     repeat' (first | (apply re_wsq_nonneg; norm_num) | apply add_nonneg)
+  have hI : (((Complex.normSq (v 0) + Complex.normSq (v 1) : ℝ) : ℂ)
+      * (star w ⬝ᵥ (phi24 (vecMulVec v (star v)) *ᵥ w))).im = 0 := by
+    rw [Complex.ofReal_add, ← h0, ← h1, hc]
+    simp only [Complex.add_im, him, add_zero]
   rw [Complex.re_ofReal_mul] at hR
+  rw [Complex.im_ofReal_mul] at hI
   rcases (add_nonneg (Complex.normSq_nonneg (v 0)) (Complex.normSq_nonneg (v 1))).lt_or_eq with hpos | hzero
-  · exact (mul_nonneg_iff_of_pos_left hpos).1 hR
+  · exact ⟨(mul_nonneg_iff_of_pos_left hpos).1 hR, (mul_eq_zero.1 hI).resolve_left hpos.ne'⟩
   · have hv0 : v 0 = 0 := by
       have := Complex.normSq_nonneg (v 1)
       exact Complex.normSq_eq_zero.1 (by linarith [Complex.normSq_nonneg (v 0)])
@@ -552,12 +614,13 @@ theorem phi24_sum {ι : Type*} (s : Finset ι) (X : ι → Matrix (Fin 2) (Fin 2
 
 /-- `Φ₂₄` takes every positive semidefinite matrix `Bᴴ B` to a positive semidefinite one. -/
 theorem phi24_positive_psd {m : ℕ} (B : Matrix (Fin m) (Fin 2) ℂ) (w : Fin 4 → ℂ) :
-    0 ≤ (star w ⬝ᵥ (phi24 (Bᴴ * B) *ᵥ w)).re := by
+    0 ≤ (star w ⬝ᵥ (phi24 (Bᴴ * B) *ᵥ w)).re ∧ (star w ⬝ᵥ (phi24 (Bᴴ * B) *ᵥ w)).im = 0 := by
   have hB : Bᴴ * B = ∑ r, vecMulVec (fun i => star (B r i)) (star fun i => star (B r i)) := by
     ext i j
     simp [Matrix.mul_apply, Matrix.conjTranspose_apply, Matrix.sum_apply, vecMulVec_apply]
-  rw [hB, phi24_sum, Matrix.sum_mulVec, dotProduct_sum, Complex.re_sum]
-  exact Finset.sum_nonneg fun r _ => phi24_positive _ w
+  rw [hB, phi24_sum, Matrix.sum_mulVec, dotProduct_sum, Complex.re_sum, Complex.im_sum]
+  exact ⟨Finset.sum_nonneg fun r _ => (phi24_positive _ w).1,
+    Finset.sum_eq_zero fun r _ => (phi24_positive _ w).2⟩
 
 /-! ### The witness state and non-decomposability -/
 
@@ -684,8 +747,30 @@ theorem inclN_conjTranspose_mul {n d : ℕ} (h : n ≤ d) : (inclN n d)ᴴ * inc
 noncomputable def extend24 (d : ℕ) (X : Matrix (Fin 2) (Fin 2) ℂ) : Matrix (Fin d) (Fin d) ℂ :=
   inclN 4 d * phi24 X * (inclN 4 d)ᴴ
 
+/-- `Φ₂₄` as a `ℂ`-linear map. -/
+def phi24Lin : Matrix (Fin 2) (Fin 2) ℂ →ₗ[ℂ] Matrix (Fin 4) (Fin 4) ℂ where
+  toFun := phi24
+  map_add' X Y := by
+    ext i j
+    fin_cases i <;> fin_cases j <;> simp [phi24] <;> ring
+  map_smul' c X := by
+    ext i j
+    fin_cases i <;> fin_cases j <;> simp [phi24] <;> ring
+
+/-- The extension of `Φ₂₄` to `M₂ → M_d` as a `ℂ`-linear map. -/
+noncomputable def extend24Lin (d : ℕ) : Matrix (Fin 2) (Fin 2) ℂ →ₗ[ℂ] Matrix (Fin d) (Fin d) ℂ where
+  toFun := extend24 d
+  map_add' X Y := by
+    simp only [extend24]
+    rw [show phi24 (X + Y) = phi24Lin (X + Y) from rfl, phi24Lin.map_add]
+    simp only [show ∀ Z, phi24Lin Z = phi24 Z from fun _ => rfl, Matrix.mul_add, Matrix.add_mul]
+  map_smul' c X := by
+    simp only [extend24, RingHom.id_apply]
+    rw [show phi24 (c • X) = phi24Lin (c • X) from rfl, phi24Lin.map_smul]
+    simp only [show ∀ Z, phi24Lin Z = phi24 Z from fun _ => rfl, Matrix.mul_smul, Matrix.smul_mul]
+
 theorem extend24_positive (d : ℕ) {m : ℕ} (B : Matrix (Fin m) (Fin 2) ℂ) (w : Fin d → ℂ) :
-    0 ≤ (star w ⬝ᵥ (extend24 d (Bᴴ * B) *ᵥ w)).re := by
+    0 ≤ (star w ⬝ᵥ (extend24 d (Bᴴ * B) *ᵥ w)).re ∧ (star w ⬝ᵥ (extend24 d (Bᴴ * B) *ᵥ w)).im = 0 := by
   unfold extend24
   rw [quad_conj]
   exact phi24_positive_psd _ _
@@ -708,23 +793,6 @@ theorem extend24_not_decomposable {d : ℕ} (h : 4 ≤ d) :
   · refine Finset.sum_congr rfl fun l _ => ?_
     simp only [Matrix.conjTranspose_mul, Matrix.conjTranspose_conjTranspose, Matrix.mul_assoc]
 
-/-- A map `M_n(ℂ) → M_m(ℂ)` is positive: it takes every positive semidefinite `Bᴴ B` to a positive
-semidefinite matrix. -/
-def IsPositive {n m : ℕ} (Φ : Matrix (Fin n) (Fin n) ℂ → Matrix (Fin m) (Fin m) ℂ) : Prop :=
-  ∀ (r : ℕ) (B : Matrix (Fin r) (Fin n) ℂ) (w : Fin m → ℂ), 0 ≤ (star w ⬝ᵥ (Φ (Bᴴ * B) *ᵥ w)).re
-
-/-- A map is decomposable: a completely positive map plus a completely positive map after the
-transpose, both in Kraus form. -/
-def IsDecomposable {n m : ℕ} (Φ : Matrix (Fin n) (Fin n) ℂ → Matrix (Fin m) (Fin m) ℂ) : Prop :=
-  ∃ (p q : ℕ) (K : Fin p → Matrix (Fin m) (Fin n) ℂ) (L : Fin q → Matrix (Fin m) (Fin n) ℂ),
-    ∀ X, Φ X = ∑ k, K k * X * (K k)ᴴ + ∑ l, L l * Xᵀ * (L l)ᴴ
-
-/-- The Letter's readability of a type `(d₁, d₂)`: every positive map between the operator algebras of
-its two ends, in either direction, is decomposable. -/
-def Readable (d₁ d₂ : ℕ) : Prop :=
-  (∀ Φ : Matrix (Fin d₁) (Fin d₁) ℂ → Matrix (Fin d₂) (Fin d₂) ℂ, IsPositive Φ → IsDecomposable Φ) ∧
-  (∀ Ψ : Matrix (Fin d₂) (Fin d₂) ℂ → Matrix (Fin d₁) (Fin d₁) ℂ, IsPositive Ψ → IsDecomposable Ψ)
-
 /-- **The dark direction of the read cap.** A readable type with both ends of dimension at least two has
 `d₁ d₂ ≤ 6`. Equivalently, every type with `d₁ d₂ ≥ 8` (no product of two integers `≥ 2` is 7) has a
 positive, non-decomposable map between its ends. -/
@@ -739,11 +807,11 @@ theorem readable_imp_le_six {d₁ d₂ : ℕ} (h₁ : 2 ≤ d₁) (h₂ : 2 ≤ 
     · obtain rfl : d₁ = 2 := by omega
       have h4 : 4 ≤ d₂ := by omega
       exact extend24_not_decomposable h4
-        (hr.1 (extend24 d₂) fun r B w => extend24_positive d₂ B w)
+        (hr.1 (extend24Lin d₂) fun r B w => extend24_positive d₂ B w)
     · obtain rfl : d₂ = 2 := by omega
       have h4 : 4 ≤ d₁ := by omega
       exact extend24_not_decomposable h4
-        (hr.2 (extend24 d₁) fun r B w => extend24_positive d₁ B w)
+        (hr.2 (extend24Lin d₁) fun r B w => extend24_positive d₁ B w)
 
 end ChoiDark
 

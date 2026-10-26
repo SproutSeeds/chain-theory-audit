@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-26T03:18:17+00:00",
+  "checked_at": "2026-10-26T08:13:55+00:00",
   "source": "lean/ChoiDark.lean",
-  "source_sha256": "f16b0b6556d603bbb10ea4a770f460729152c11279a0e4e560ea9d5eb3c68e4d",
+  "source_sha256": "fb2ff5d7b52762ee7036e9d16b0c09cc4e4ebb9f60ba72d015159cd21f0ad58a",
   "lean_version": "Lean (version 4.26.0, arm64-apple-darwin24.6.0, commit d8204c9fd894f91bbb2cdfec5912ec8196fd8562, Release)",
   "mathlib_rev": "v4.26.0",
   "mathlib_commit": "2df2f0150c275ad53cb3c90f7c98ec15a56a1a67",
